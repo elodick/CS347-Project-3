@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float MoveSpeed;
+    public float moveSpeed;
+    public Rigidbody2D rb;
+    public Camera cam;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Vector2 mouse;
 
     // Update is called once per frame
     void Update()
@@ -21,47 +19,46 @@ public class PlayerMovement : MonoBehaviour
         var upIspressed = Input.GetKey(KeyCode.W);
 
         if (rightIsPressed)
-        {
             MoveRight();
-        }
-        // Called when Left key is Pressed
         if (leftIsPressed)
-        {
             MoveLeft();
-        }
-
         if (downIsPressed)
-        {
             MoveDown();
-        }
-
         if (upIspressed)
-        {
             MoveUp();
-        }
+        
+        
+        mouse = cam.ScreenToWorldPoint(Input.mousePosition);
+    }
+
+    void FixedUpdate()
+    {
+        Vector2 lookdir = mouse - rb.position;
+        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 
     private void MoveRight()
     {
-        transform.position += new Vector3(MoveSpeed, 0, 0);
+        transform.position += new Vector3(moveSpeed, 0, 0);
 
     }
 
     private void MoveLeft()
     {
-        transform.position += new Vector3(-MoveSpeed, 0, 0);
+        transform.position += new Vector3(-moveSpeed, 0, 0);
 
     }
 
     private void MoveDown()
     {
-        transform.position += new Vector3(0, -MoveSpeed, 0);
+        transform.position += new Vector3(0, -moveSpeed, 0);
 
     }
 
     private void MoveUp()
     {
-        transform.position += new Vector3(0, MoveSpeed, 0);
+        transform.position += new Vector3(0, moveSpeed, 0);
 
     }
 }
