@@ -4,4 +4,9 @@
 VFXManager:
   m_ObjectHideFlags: 0
   m_IndirectShader: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+  m_CopyBufferShader: {fileID: 0}
+  m_SortShader: {fileID: 0}
+>>>>>>> Stashed changes
   m_RenderPipeSettingsPath: 
