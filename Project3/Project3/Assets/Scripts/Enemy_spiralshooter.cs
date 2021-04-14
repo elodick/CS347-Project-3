@@ -17,6 +17,11 @@ public class Enemy_spiralshooter : EnemyController
         selfPosition = selfTransform.position;
     }
 
+    int getNumberOfProjectiles()
+    {
+        var result = Random.Range(4, 36);
+        return (int)result;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -41,6 +46,7 @@ public class Enemy_spiralshooter : EnemyController
 
     private void Attack()
     {
+        numberOfProjectiles = getNumberOfProjectiles();
         float angleStep = 360f / numberOfProjectiles;
         float angle = 0f;
 
