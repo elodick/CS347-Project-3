@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -63,5 +64,13 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.position += new Vector3(0, MoveSpeed, 0);
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("projectile"))
+        {
+            SceneManager.LoadScene("SampleScene");
+        }
     }
 }
