@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    protected enum Behavior { IDLE, ATTACK, MOVE };
+    public enum Behavior { IDLE, ATTACK, MOVE };
     protected GameObject player;
     protected Transform playerTransform;
     protected Transform selfTransform;
-    protected Behavior behavior;
+    public Behavior behavior;
 
 
     public int health;
@@ -30,5 +30,13 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("projectile"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider2D>());
+        }
     }
 }
