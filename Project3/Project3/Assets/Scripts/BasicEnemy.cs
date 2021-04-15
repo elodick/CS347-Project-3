@@ -23,7 +23,7 @@ public class BasicEnemy : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        
+     // Decrease attack time by delta time
     }
     // Update is called once per frame
     void Update()
