@@ -5,10 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    public Rigidbody2D rb;
-    public Camera cam;
-
-    Vector2 mouse;
 
     // Update is called once per frame
     void Update()
@@ -26,16 +22,11 @@ public class PlayerMovement : MonoBehaviour
             MoveDown();
         if (upIspressed)
             MoveUp();
-        
-        
-        mouse = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
     {
-        Vector2 lookdir = mouse - rb.position;
-        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        
     }
 
     private void MoveRight()
@@ -61,4 +52,5 @@ public class PlayerMovement : MonoBehaviour
         transform.position += new Vector3(0, moveSpeed, 0);
 
     }
+
 }

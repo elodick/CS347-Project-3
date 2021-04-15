@@ -23,14 +23,11 @@ public class Enemy_chaser : EnemyController
     void Update()
     {
         AIUpdate();
-        if (health == 0)
-        {
-            Destroy(gameObject);
-        }
     }
 
-    private void FixedUpdate()
+    override protected void FixedUpdate()
     {
+        base.FixedUpdate();
         lungeDelay -= Time.deltaTime;
     }
 

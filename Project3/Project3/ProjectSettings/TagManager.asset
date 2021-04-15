@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - projectile
+  - playerbullet
+  - Enemy
+  - playerpellet
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - 
   - projectile
   - level
-  - 
-  - 
-  - 
+  - player
+  - playerprojectile
+  - enemy
   - 
   - 
   - 

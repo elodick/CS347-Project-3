@@ -26,11 +26,16 @@ public class Enemy_spiralshooter : EnemyController
     void Update()
     {
         Aggro();
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
-    private void FixedUpdate()
+    override protected void FixedUpdate()
     {
         firingSpeed -= Time.deltaTime;
+        base.FixedUpdate();
     }
     private void Aggro()
     {

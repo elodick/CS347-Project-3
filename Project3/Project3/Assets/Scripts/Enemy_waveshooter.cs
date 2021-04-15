@@ -10,7 +10,8 @@ public class Enemy_waveshooter : EnemyController
     Vector3 selfPosition;
     public float sideSpeed = 1f;
     private Vector2 direction;
-    private float lifetime;
+    public float lifetime;
+    public float frequency;
 
     override protected void Start()
     {
@@ -24,10 +25,14 @@ public class Enemy_waveshooter : EnemyController
         Aggro();
     }
 
-    private void FixedUpdate()
+    override protected void FixedUpdate()
     {
         firingSpeed -= Time.deltaTime;
-        lifetime -= Time.deltaTime;
+        if (speed >= 10)
+        {
+            speed = 0;
+        }
+        base.FixedUpdate();
     }
     private void Aggro()
     {
@@ -43,9 +48,7 @@ public class Enemy_waveshooter : EnemyController
 
     private void Attack()
     {
-        float frequency = 2;
-        float amplitude = 2;
-        float speed = 1;
+        speed++;
         for (int i = 0; i < 4; i++)
         {
             switch (i)
