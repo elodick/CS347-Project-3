@@ -11,7 +11,7 @@ public class AlternatingAI : MonoBehaviour
     [SerializeField]
     public float bulletForce = 1f;
 
-    public int Health;
+    public int Health = 3;
     public float AttackDelay = 1f;
 
     public float AttackTime;
@@ -60,6 +60,10 @@ public class AlternatingAI : MonoBehaviour
             Shoot(shootDir);
             AttackTime = AttackDelay;
         }
+        if (Health <= 0)
+        {
+            Destroy(this.gameObject); 
+        }
     }
     private void Shoot(bool shootDir)
     {
@@ -94,5 +98,13 @@ public class AlternatingAI : MonoBehaviour
             bullet4.GetComponent<Rigidbody2D>().velocity = new Vector3(bulletForce, -bulletForce, 0);
         }
     }
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Bullet"))
+        {
+            Health--;
+        }
+    }
+
 }

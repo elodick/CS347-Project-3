@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletEnemy : MonoBehaviour //Bullets that the enemies are firing
+public class Bullet : MonoBehaviour
 {
     public GameObject hitEffect;
 
@@ -14,11 +14,6 @@ public class BulletEnemy : MonoBehaviour //Bullets that the enemies are firing
         Destroy(gameObject);
         */ 
         if(collision.gameObject.CompareTag("Wall"))
-        {
-            Destroy(this.gameObject);
-
-        }
-        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(this.gameObject);
 
