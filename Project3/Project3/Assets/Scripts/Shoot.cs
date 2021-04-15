@@ -13,6 +13,17 @@ public class Shoot : MonoBehaviour
     public float bulletForce = 20f;
     public float spreadWidth;
     private float timer;
+    public float flameRange;
+    public float flameLength;
+    private LineRenderer line;
+    private Vector3 mousePos;
+    void Start()
+    {
+        player = GameObject.Find("Player");
+        playerRB = player.GetComponent<Rigidbody2D>();
+        line = player.GetComponent<LineRenderer>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -20,18 +31,23 @@ public class Shoot : MonoBehaviour
             basicShot();
         if (Input.GetMouseButtonDown(1) && timer <= 0)
             spreadShot();
+        if (Input.GetMouseButtonDown(2) && timer <= 0)
+        {
+            line.positionCount = 2;
+            flameShot();
+        }
+        if (Input.GetMouseButtonUp(2))
+            line.positionCount = 0;
         firePoint = player.transform;
     }
 
     private void FixedUpdate()
     {
         timer -= Time.deltaTime;
+
+        mousePos = player.GetComponent<PlayerController>().cam.ScreenToWorldPoint(Input.mousePosition); ;
     }
-    void Start()
-    {
-        player = GameObject.Find("Player");
-        playerRB = player.GetComponent<Rigidbody2D>();
-    }
+    
     void basicShot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
@@ -50,5 +66,11 @@ public class Shoot : MonoBehaviour
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         }
         timer = 0.5f;
+    }
+
+    void flameShot()
+    {
+        line.SetPosition(0, player.transform.position);
+        line.SetPosition(1, mousePos / flameLength);
     }
 }
