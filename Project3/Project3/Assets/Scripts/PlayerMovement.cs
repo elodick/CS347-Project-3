@@ -7,10 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public Rigidbody2D rb;
     public Camera cam;
+    public int Health; 
 
     Vector2 mouse;
     private void Start()
     {
+        Health = 3; 
         //rb = this.gameObject.GetComponent<Rigidbody2D>;
     }
     // Update is called once per frame
