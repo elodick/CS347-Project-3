@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMelee : MonoBehaviour
+public class EnemyExplode: MonoBehaviour
 {
     public GameObject explosion;
 
