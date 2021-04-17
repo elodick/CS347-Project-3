@@ -30,8 +30,8 @@ public class Heart_Manage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Player = gameObject.transform.parent.gameObject;
-        Health = Player.GetComponent<PlayerMovement>().Health;
+       // Player = gameObject.transform.parent.gameObject;
+        Health = Player.GetComponent<PlayerMovementDylan>().Health;
         Hearts = Health; 
     }
 
@@ -39,7 +39,7 @@ public class Heart_Manage : MonoBehaviour
     void Update()
     {
         // Continuously update player's current health status
-        Health = Player.GetComponent<PlayerMovement>().Health;
+        //Health = Player.GetComponent<PlayerMovementDylan>().Health; //This may be removed
         Hearts = Health;
 
         for (int i = 0; i < HeartList.Length; i++)
@@ -66,5 +66,12 @@ public class Heart_Manage : MonoBehaviour
             
         }
 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            Health--; 
+        }
     }
 }

@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcbdfb37a1ff164291b861ad444ac7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8868714642342940363, guid: 29ad14a60a59dac47b49038e042b6276,
+  bulletPrefab: {fileID: 6406765260746010374, guid: a99609b1eeaec8f4f9a89e43c077d382,
     type: 3}
   bulletForce: 20
   Health: 3
