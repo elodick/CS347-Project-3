@@ -12,7 +12,7 @@ public class Shoot : MonoBehaviour
     private Rigidbody2D playerRB;
     public float bulletForce = 20f;
     public float spreadWidth;
-    private float timer;
+    public float timer;
     public float flameRange;
     public float flameLength;
     private LineRenderer line;

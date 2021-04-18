@@ -27,8 +27,8 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (health <= 0)
-            SceneManager.LoadScene("SampleScene");
+        //if (health <= 0)
+            //SceneManager.LoadScene("SampleScene");
         timer -= Time.deltaTime;
         if (timer <= 0)
             spriteRenderer.color = new Color(1, 1, 1, 1);

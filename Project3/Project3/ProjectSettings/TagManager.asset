@@ -9,6 +9,8 @@ TagManager:
   - playerbullet
   - Enemy
   - playerpellet
+  - EnemyParent
+  - spawnpoint
   layers:
   - Default
   - TransparentFX
