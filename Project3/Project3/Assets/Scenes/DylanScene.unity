@@ -504,11 +504,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6648334737974260765, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
-        type: 3}
-      propertyPath: m_Name
-      value: Alternating Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 6648334737974260760, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -563,6 +558,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6648334737974260765, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: m_Name
+      value: Alternating Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c516cd579ce7bee4a998fb1e4dcd96e0, type: 3}
@@ -1566,16 +1566,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948975036}
     m_Modifications:
-    - target: {fileID: 4098936763124751662, guid: 149bd34d29a47f04897906526dfbbb3a,
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
-      propertyPath: m_Name
-      value: ChasingEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4098936763124751662, guid: 149bd34d29a47f04897906526dfbbb3a,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1342241813}
     - target: {fileID: 4098936763124751659, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1631,11 +1626,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+    - target: {fileID: 4098936763124751662, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1342241813}
+      propertyPath: m_Name
+      value: ChasingEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098936763124751662, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149bd34d29a47f04897906526dfbbb3a, type: 3}
 --- !u!1001 &6241204920732885067
@@ -1645,11 +1645,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6406765260746010374, guid: a99609b1eeaec8f4f9a89e43c077d382,
-        type: 3}
-      propertyPath: m_Name
-      value: Bullet
-      objectReference: {fileID: 0}
     - target: {fileID: 1378737391541985573, guid: a99609b1eeaec8f4f9a89e43c077d382,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1704,6 +1699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6406765260746010374, guid: a99609b1eeaec8f4f9a89e43c077d382,
+        type: 3}
+      propertyPath: m_Name
+      value: Bullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a99609b1eeaec8f4f9a89e43c077d382, type: 3}

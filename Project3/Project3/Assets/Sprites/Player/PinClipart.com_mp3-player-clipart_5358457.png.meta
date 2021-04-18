@@ -1,0 +1,1159 @@
+fileFormatVersion: 2
+guid: 581a18b35bf633d45abfe69eb996c058
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4795368606429447053
+    second: PinClipart.com_mp3-player-clipart_5358457_0
+  - first:
+      213: 3060355690877692144
+    second: PinClipart.com_mp3-player-clipart_5358457_1
+  - first:
+      213: -333360999745568643
+    second: PinClipart.com_mp3-player-clipart_5358457_2
+  - first:
+      213: -8296696227885185854
+    second: PinClipart.com_mp3-player-clipart_5358457_3
+  - first:
+      213: -1946107750441532331
+    second: PinClipart.com_mp3-player-clipart_5358457_4
+  - first:
+      213: -3230781043880523510
+    second: PinClipart.com_mp3-player-clipart_5358457_5
+  - first:
+      213: -8286204383398582518
+    second: PinClipart.com_mp3-player-clipart_5358457_6
+  - first:
+      213: -3217460434467981339
+    second: PinClipart.com_mp3-player-clipart_5358457_7
+  - first:
+      213: 2716489874451838652
+    second: PinClipart.com_mp3-player-clipart_5358457_8
+  - first:
+      213: -1764224284034494416
+    second: PinClipart.com_mp3-player-clipart_5358457_9
+  - first:
+      213: 7606661577696634528
+    second: PinClipart.com_mp3-player-clipart_5358457_10
+  - first:
+      213: -5963186252558465608
+    second: PinClipart.com_mp3-player-clipart_5358457_11
+  - first:
+      213: -5265788130190893763
+    second: PinClipart.com_mp3-player-clipart_5358457_12
+  - first:
+      213: 7321774749822224794
+    second: PinClipart.com_mp3-player-clipart_5358457_13
+  - first:
+      213: -2453117861767953985
+    second: PinClipart.com_mp3-player-clipart_5358457_14
+  - first:
+      213: 1612025172444044474
+    second: PinClipart.com_mp3-player-clipart_5358457_15
+  - first:
+      213: -1176001431221256609
+    second: PinClipart.com_mp3-player-clipart_5358457_16
+  - first:
+      213: 1764485048895922172
+    second: PinClipart.com_mp3-player-clipart_5358457_17
+  - first:
+      213: 668271279077793499
+    second: PinClipart.com_mp3-player-clipart_5358457_18
+  - first:
+      213: 880981017622814200
+    second: PinClipart.com_mp3-player-clipart_5358457_19
+  - first:
+      213: 3244055457763738149
+    second: PinClipart.com_mp3-player-clipart_5358457_20
+  - first:
+      213: 1792690023330274917
+    second: PinClipart.com_mp3-player-clipart_5358457_21
+  - first:
+      213: 7394897147720591850
+    second: PinClipart.com_mp3-player-clipart_5358457_22
+  - first:
+      213: -2560619558476958796
+    second: PinClipart.com_mp3-player-clipart_5358457_23
+  - first:
+      213: -2984049482518779418
+    second: PinClipart.com_mp3-player-clipart_5358457_24
+  - first:
+      213: -8160965932625746624
+    second: PinClipart.com_mp3-player-clipart_5358457_25
+  - first:
+      213: -6865034612051388561
+    second: PinClipart.com_mp3-player-clipart_5358457_26
+  - first:
+      213: 9076629259518751887
+    second: PinClipart.com_mp3-player-clipart_5358457_27
+  - first:
+      213: -406222509707917164
+    second: PinClipart.com_mp3-player-clipart_5358457_28
+  - first:
+      213: -3835558130105481343
+    second: PinClipart.com_mp3-player-clipart_5358457_29
+  - first:
+      213: 642693207089524370
+    second: PinClipart.com_mp3-player-clipart_5358457_30
+  - first:
+      213: -6983628567223236908
+    second: PinClipart.com_mp3-player-clipart_5358457_31
+  - first:
+      213: 4577732369550805966
+    second: PinClipart.com_mp3-player-clipart_5358457_32
+  - first:
+      213: -3797108749746318213
+    second: PinClipart.com_mp3-player-clipart_5358457_33
+  - first:
+      213: 8502916000880322191
+    second: PinClipart.com_mp3-player-clipart_5358457_34
+  - first:
+      213: -4189462558258398859
+    second: PinClipart.com_mp3-player-clipart_5358457_35
+  - first:
+      213: -4015421488966797823
+    second: PinClipart.com_mp3-player-clipart_5358457_36
+  - first:
+      213: 1151612404870925737
+    second: PinClipart.com_mp3-player-clipart_5358457_37
+  - first:
+      213: -5305037885352910781
+    second: PinClipart.com_mp3-player-clipart_5358457_38
+  - first:
+      213: 4387181953404398290
+    second: PinClipart.com_mp3-player-clipart_5358457_39
+  - first:
+      213: -4210087046515375142
+    second: PinClipart.com_mp3-player-clipart_5358457_40
+  - first:
+      213: -5721428867702249895
+    second: PinClipart.com_mp3-player-clipart_5358457_41
+  - first:
+      213: -8814977308423742887
+    second: PinClipart.com_mp3-player-clipart_5358457_42
+  - first:
+      213: -5637061415749033318
+    second: PinClipart.com_mp3-player-clipart_5358457_43
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e13835ddcd0660459b8adf503cb15db
+      internalID: -4795368606429447053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946836d2d08a7d84ab93c97266c31c35
+      internalID: 3060355690877692144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff0a2bc584191341b288c682ab1f13c
+      internalID: -333360999745568643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_3
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6453a052b32f87a43b8a4322cde87ba5
+      internalID: -8296696227885185854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_4
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 223f6d5c0ed5ea1469b73f4ab70e93a6
+      internalID: -1946107750441532331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_5
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b27bb22cf27ff848b135fc8a0e0bae5
+      internalID: -3230781043880523510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_6
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 351
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6650aae20f40d944baf07f706d0033b
+      internalID: -8286204383398582518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_7
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 339
+        width: 53
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f079987b048d8a44bff73f6ba4cc929
+      internalID: -3217460434467981339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_8
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 339
+        width: 53
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a9f7cf6340bb54393f42923d1ee70d
+      internalID: 2716489874451838652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_9
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 339
+        width: 53
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c391b216cda1c9e4292410731c1547a6
+      internalID: -1764224284034494416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_10
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 339
+        width: 53
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b0adfd3292aeb47a9fb2171408e587
+      internalID: 7606661577696634528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5119bbed9c6784b9a6817a36396c0f
+      internalID: -5963186252558465608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_12
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e720779e0c097ee4eb7af3df891914ad
+      internalID: -5265788130190893763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_13
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef2e3d0bf754be4a81ce85f5e2646a3
+      internalID: 7321774749822224794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_14
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f0339e6df9a354ea25983cb4b05648
+      internalID: -2453117861767953985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_15
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47143e1efe8d6f64497ff595aab82f52
+      internalID: 1612025172444044474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_16
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3a1578ffc554642a9340e061db72ed
+      internalID: -1176001431221256609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_17
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 234
+        width: 54
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240297af460e3d94dabe7434f90e5dfb
+      internalID: 1764485048895922172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_18
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 245
+        width: 53
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9784c6cdae69b6241a06f777140eff9e
+      internalID: 668271279077793499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_19
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 245
+        width: 53
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb48ba7a3efd1b49a5e5f879e4d075f
+      internalID: 880981017622814200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_20
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 245
+        width: 53
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18215a73b97d3f2499ccb5f76f374c7e
+      internalID: 3244055457763738149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_21
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 245
+        width: 53
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e4f8d6ffb28c442811193e54cb1022
+      internalID: 1792690023330274917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_22
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 117
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6b0a266bdbee1544a1861395ee95bfe
+      internalID: 7394897147720591850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_23
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 117
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c86809ffd549d48a060067a38ae6cc
+      internalID: -2560619558476958796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_24
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 117
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea8d46d184d3cd4e8c0c8ef58abda6d
+      internalID: -2984049482518779418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_25
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 117
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c55d9076d6cf8468d45b9657c7e9e3
+      internalID: -8160965932625746624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_26
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 117
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8913819d37bab418adf6508fcf2550
+      internalID: -6865034612051388561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_27
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 117
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854133047a7e55c46b9831865834b36e
+      internalID: 9076629259518751887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_28
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 117
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1610c6db2d0dd8d47ae25f1ce7a62555
+      internalID: -406222509707917164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_29
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 119
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e9a6593c27b6442a53a8f18fb4d949
+      internalID: -3835558130105481343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_30
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 119
+        width: 55
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cc41fee5ab9894a88c68d31205a5d5
+      internalID: 642693207089524370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_31
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 119
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa895520dd4a054b8d8ff9c765d4c49
+      internalID: -6983628567223236908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_32
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 119
+        width: 50
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2da8a2267bb144ea1285e2210ced3f
+      internalID: 4577732369550805966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_33
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6ce249386776c4b8456885e8fc1e4b
+      internalID: -3797108749746318213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_34
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da87005fb24e4c4d86c609cc372897c
+      internalID: 8502916000880322191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_35
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 2
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b758d62cdb1474ea4830a5ab2c9402
+      internalID: -4189462558258398859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_36
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 0
+        width: 60
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdef8d32331d4aa44b7dc6877b5cae87
+      internalID: -4015421488966797823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_37
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 0
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca96f1a097c0056488c3fd2ce7f91f5a
+      internalID: 1151612404870925737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_38
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 2
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558c02244da718b4d8cf668db49d229c
+      internalID: -5305037885352910781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_39
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 2
+        width: 60
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eda224ca86d5d543be38bade465ebec
+      internalID: 4387181953404398290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_40
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 2
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8039ae2fe645757418b7f769d4e7c382
+      internalID: -4210087046515375142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_41
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 2
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48389291bf0ff6d4fbd27d18ad4f7041
+      internalID: -5721428867702249895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_42
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 2
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96dded3edb59544185ab29cc028b557
+      internalID: -8814977308423742887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinClipart.com_mp3-player-clipart_5358457_43
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 2
+        width: 55
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb489d74f5d2cc40af6099cde91846e
+      internalID: -5637061415749033318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
