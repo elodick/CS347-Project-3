@@ -2224,7 +2224,7 @@ GameObject:
   - component: {fileID: 575178240}
   - component: {fileID: 575178239}
   - component: {fileID: 575178241}
-  m_Layer: 8
+  m_Layer: 12
   m_Name: shooting_enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -2258,6 +2258,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
+  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
+    type: 3}
   health: 5
   speed: 0
   aggroDistance: 25
@@ -3715,6 +3717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
+  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
+    type: 3}
   health: 10
   speed: 0
   aggroDistance: 15
@@ -6059,6 +6063,12 @@ PrefabInstance:
       propertyPath: health
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: dropPrefab
+      value: 
+      objectReference: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
+        type: 3}
     - target: {fileID: 6648334737259910493, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
         type: 3}
       propertyPath: m_Layer
@@ -6219,6 +6229,12 @@ PrefabInstance:
       propertyPath: aggroDistance
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: dropPrefab
+      value: 
+      objectReference: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
+        type: 3}
     - target: {fileID: 4098936763124751658, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
       propertyPath: m_Color.g
@@ -6363,6 +6379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
+  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
+    type: 3}
   health: 10
   speed: 5
   aggroDistance: 25
@@ -6498,6 +6516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
+  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
+    type: 3}
   health: 10
   speed: 0
   aggroDistance: 15

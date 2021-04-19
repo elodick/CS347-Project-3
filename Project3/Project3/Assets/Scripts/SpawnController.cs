@@ -49,7 +49,8 @@ public class SpawnController : MonoBehaviour
     void spawnEnemy()
     {
         enemiesWeight();
-        int numToSpawn = 5;
+        float probabilityNum = Probabilities.RandomNormalVariable(4, 6, 5, 20);
+        int numToSpawn = Mathf.RoundToInt(probabilityNum);
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
         {
@@ -70,6 +71,8 @@ public class SpawnController : MonoBehaviour
                 spawnpoints.RemoveAt(randSpawnLoc);
             }
         }
+
+        
         enemiesWeight();
     }
 
