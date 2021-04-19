@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     protected Transform selfTransform;
     public Behavior behavior;
 
+    public GameObject dropPrefab;
     private SpriteRenderer spriteRenderer;
 
     public int health;
@@ -76,5 +77,10 @@ public class EnemyController : MonoBehaviour
         {
             behavior = Behavior.ATTACK;
         }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(dropPrefab, transform.position, transform.rotation);
     }
 }
