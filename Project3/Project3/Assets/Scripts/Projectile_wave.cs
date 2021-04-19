@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile_wave : MonoBehaviour
+public class Projectile_wave : EnemyProjectileController
 {
     public float frequency = 2;
     public float amplitude = 2;
@@ -26,11 +26,4 @@ public class Projectile_wave : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("playerbullet"))
-        {
-            Destroy(gameObject);
-        }
-    }
 }

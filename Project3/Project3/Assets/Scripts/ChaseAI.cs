@@ -8,8 +8,6 @@ public class ChaseAI : EnemyController
     [SerializeField]
     Transform Player;
 
-    [SerializeField]
-    float agroRange; 
 
     Rigidbody2D rb;
 
@@ -24,7 +22,7 @@ public class ChaseAI : EnemyController
     {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
         
-        if(distanceToPlayer <= agroRange) //Chase Player
+        if(behavior == Behavior.ATTACK) //Chase Player
         {
             ChasePlayer();
         }
