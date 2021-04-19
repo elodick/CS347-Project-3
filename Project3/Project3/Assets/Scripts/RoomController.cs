@@ -12,7 +12,7 @@ public class RoomController : MonoBehaviour
     public int wave;
     public int enemiesCount;
     public int totalWeight;
-    private int weight;
+    public int weight;
     private int originalEnemyCount;
     // Start is called before the first frame update
     void Start()
@@ -47,6 +47,7 @@ public class RoomController : MonoBehaviour
 
     void spawnEnemy()
     {
+        enemiesWeight();
         int numToSpawn = 5;
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
@@ -65,6 +66,7 @@ public class RoomController : MonoBehaviour
             Instantiate(enemies[randNumSpawn], spawnpoints[randSpawnLoc].transform.position, Quaternion.identity);
             spawnpoints.RemoveAt(randSpawnLoc);
         }
+        enemiesWeight();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

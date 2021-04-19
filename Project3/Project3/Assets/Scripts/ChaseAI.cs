@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChaseAI : MonoBehaviour
+public class ChaseAI : EnemyController
 {
     // Start is called before the first frame update
     [SerializeField]
@@ -11,17 +11,12 @@ public class ChaseAI : MonoBehaviour
     [SerializeField]
     float agroRange; 
 
-    [SerializeField]
-    float speed;
-
     Rigidbody2D rb;
 
-    [SerializeField]
-    int health; 
-    void Start()
+    override protected void Start()
     {
+        base.Start();
         rb = GetComponent<Rigidbody2D>();
-        health = 4; 
     }
 
     // Update is called once per frame
@@ -37,10 +32,6 @@ public class ChaseAI : MonoBehaviour
         {
             stopChasing();
         }
-        if (health <= 0)
-        {
-            death(); 
-        }
     }
     private void ChasePlayer()
     {
@@ -52,18 +43,6 @@ public class ChaseAI : MonoBehaviour
     }
     private void stopChasing()
     {
-
-    }
-    private void death()
-    {
-        Destroy(this.gameObject);
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            health--;
-        }
 
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AlternatingAI : MonoBehaviour
+public class AlternatingAI : EnemyController
 {
     // Start is called before the first frame update
     [SerializeField]
@@ -11,7 +11,6 @@ public class AlternatingAI : MonoBehaviour
     [SerializeField]
     public float bulletForce = 1f;
 
-    public int Health = 3;
   
     public float AttackDelay = 1f;
 
@@ -36,11 +35,11 @@ public class AlternatingAI : MonoBehaviour
     Transform TopLeft;
     [SerializeField]
     Transform BottomLeft;
-    void Start()
+    override protected void Start()
     {
         AttackTime = AttackDelay;    
     }
-    private void FixedUpdate()
+    override protected void FixedUpdate()
     {
      // Decrease attack time by delta time
      AttackTime -= Time.deltaTime;
@@ -61,12 +60,6 @@ public class AlternatingAI : MonoBehaviour
             Shoot(shootDir);
             AttackTime = AttackDelay;
         }
-
-        if (Health <= 0)
-        {
-            Destroy(this.gameObject); 
-        }
-
     }
     private void Shoot(bool shootDir)
     {
@@ -101,15 +94,4 @@ public class AlternatingAI : MonoBehaviour
             bullet4.GetComponent<Rigidbody2D>().velocity = new Vector3(bulletForce, -bulletForce, 0);
         }
     }
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            Health--;
-        }
-    }
-
-
 }
