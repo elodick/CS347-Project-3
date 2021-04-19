@@ -19,6 +19,7 @@ public class EnemyController : MonoBehaviour
     public float firingSpeed;
     public float cooldown;
     public float timer;
+    public int weight;
     // Start is called before the first frame update
     virtual protected void Start()
     {

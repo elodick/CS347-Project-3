@@ -11,6 +11,8 @@ public class RoomController : MonoBehaviour
     public GameObject room;
     public int wave;
     public int enemiesCount;
+    public int totalWeight;
+    private int weight;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +40,12 @@ public class RoomController : MonoBehaviour
             enemies.Add(enemy);
         }
         enemiesCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
+
     }
 
-    void spawnEnemy(int numToSpawn)
+    void spawnEnemy()
     {
+        int numToSpawn = 5;
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
         {
@@ -51,6 +55,11 @@ public class RoomController : MonoBehaviour
         {
             var randNumSpawn = Random.Range(0, enemies.Count);
             var randSpawnLoc = Random.Range(0, spawnpoints.Count);
+            if (totalWeight - weight < enemies[randNumSpawn].GetComponent<EnemyController>().weight)
+            {
+                enemies.RemoveAt(randNumSpawn);
+                randNumSpawn = Random.Range(0, enemies.Count);
+            }    
             Instantiate(enemies[randNumSpawn], spawnpoints[randSpawnLoc].transform.position, Quaternion.identity);
             spawnpoints.RemoveAt(randSpawnLoc);
         }
@@ -62,7 +71,7 @@ public class RoomController : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                spawnEnemy(5);
+                spawnEnemy();
                 spawntrigger.SetActive(false);
                 door.SetActive(true);
                 GetComponent<BoxCollider2D>().enabled = false;
@@ -70,4 +79,11 @@ public class RoomController : MonoBehaviour
             wave--;
         }
     }   
+    void enemiesWeight()
+    {
+        foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+        {
+            weight += enemy.GetComponent<EnemyController>().weight;
+        }
+    }
 }
