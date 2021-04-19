@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class EnemyExplode: MonoBehaviour
 {
-    public GameObject explosion;
+    public Animator animator;
+    public int damage = 1;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        GameObject hit = Instantiate(explosion, transform.position, Quaternion.identity);
-        Destroy(hit, 5f);
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            animator.SetTrigger("Explode");
+            collision.gameObject.GetComponent<Heart_Manage>().Health -= damage;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        animator.ResetTrigger("Explode");
     }
 }
