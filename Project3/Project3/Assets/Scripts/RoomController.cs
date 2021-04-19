@@ -13,23 +13,25 @@ public class RoomController : MonoBehaviour
     public int enemiesCount;
     public int totalWeight;
     private int weight;
+    private int originalEnemyCount;
     // Start is called before the first frame update
     void Start()
     {
         door.SetActive(false);
         wave = 2;
+        originalEnemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (wave == 0 && enemiesCount == 3)
+        if (wave == 0 && enemiesCount == originalEnemyCount)
         {
             door.SetActive(false);
         }
         if (enemiesCount != 3)
             door.SetActive(true);
-        if (wave > 0 && enemiesCount == 3)
+        if (wave > 0 && enemiesCount == originalEnemyCount)
         {
             spawntrigger.SetActive(true);
             GetComponent<BoxCollider2D>().enabled = true;
@@ -67,7 +69,7 @@ public class RoomController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (wave > 0 && enemiesCount == 3)
+        if (wave > 0 && enemiesCount == originalEnemyCount)
         {
             if (collision.gameObject.CompareTag("Player"))
             {
