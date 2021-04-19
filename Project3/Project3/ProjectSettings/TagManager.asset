@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - PlayerBullet
+  - Wall
+  - EnemyBullet
+  - RWall
+  - LWall
   layers:
   - Default
   - TransparentFX
