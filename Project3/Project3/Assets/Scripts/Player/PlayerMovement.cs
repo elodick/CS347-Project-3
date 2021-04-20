@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed;
     public Rigidbody2D rb;
     public Camera cam;
-
+    private  float speed;
     Vector2 mouse;
 
     // Update is called once per frame
@@ -34,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+        speed = GetComponent<PlayerController>().moveSpeed;
         Vector2 lookdir = mouse - rb.position;
         float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
@@ -42,25 +41,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void MoveRight()
     {
-        transform.position += new Vector3(moveSpeed, 0, 0);
+        transform.position += new Vector3(speed, 0, 0);
 
     }
 
     private void MoveLeft()
     {
-        transform.position += new Vector3(-moveSpeed, 0, 0);
+        transform.position += new Vector3(-speed, 0, 0);
 
     }
 
     private void MoveDown()
     {
-        transform.position += new Vector3(0, -moveSpeed, 0);
+        transform.position += new Vector3(0, -speed, 0);
 
     }
 
     private void MoveUp()
     {
-        transform.position += new Vector3(0, moveSpeed, 0);
+        transform.position += new Vector3(0, speed, 0);
 
     }
 

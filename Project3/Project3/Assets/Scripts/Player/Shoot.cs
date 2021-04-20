@@ -18,6 +18,7 @@ public class Shoot : MonoBehaviour
     public float flameLength;
     private LineRenderer line;
     private Vector3 mousePos;
+    private float firingSpeed;
     void Start()
     {
         player = GameObject.Find("Player");
@@ -28,15 +29,26 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && timer <= 0)
-            basicShot();
-        if (Input.GetMouseButtonDown(1) && timer <= 0)
-            spreadShot();
-        if (Input.GetMouseButtonDown(2) && timer <= 0)
+        var shotType = GameObject.Find("Player").GetComponent<PlayerController>().shotType;
+        switch (shotType)
         {
-            line.positionCount = 2;
-            flameShot();
+            case 0:
+                if (Input.GetMouseButtonDown(0) && timer <= 0)
+                    basicShot();
+                break;
+            case 1:
+                if (Input.GetMouseButtonDown(0) && timer <= 0)
+                    spreadShot();
+                break;
+            case 2:
+                if (Input.GetMouseButtonDown(0) && timer <= 0)
+                {
+                    line.positionCount = 2;
+                    flameShot();
+                }
+                break;
         }
+
         if (Input.GetMouseButtonUp(2))
             line.positionCount = 0;
         firePoint = player.transform;
@@ -45,7 +57,7 @@ public class Shoot : MonoBehaviour
     private void FixedUpdate()
     {
         timer -= Time.deltaTime;
-
+        firingSpeed = GetComponent<PlayerController>().firingSpeed;
         mousePos = player.GetComponent<PlayerController>().cam.ScreenToWorldPoint(Input.mousePosition); ;
     }
     
@@ -54,7 +66,7 @@ public class Shoot : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        timer = 0.5f;
+        timer = firingSpeed;
     }
 
     void spreadShot()
@@ -66,7 +78,7 @@ public class Shoot : MonoBehaviour
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         }
-        timer = 0.75f;
+        timer = firingSpeed;
     }
 
     void flameShot()

@@ -14,6 +14,7 @@ public class SpawnController : MonoBehaviour
     public int totalWeight;
     public int weight;
     public int originalEnemyCount;
+    public int mean, variance, maxIters, numRects;
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +50,7 @@ public class SpawnController : MonoBehaviour
     void spawnEnemy()
     {
         enemiesWeight();
-        float probabilityNum = Probabilities.RandomNormalVariable(4, 6, 5, 20);
+        float probabilityNum = Probabilities.RandomNormalVariable(mean, variance, maxIters, numRects);
         int numToSpawn = Mathf.RoundToInt(probabilityNum);
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
@@ -72,7 +73,8 @@ public class SpawnController : MonoBehaviour
             }
         }
 
-        
+
+        wave--;
         enemiesWeight();
     }
 
@@ -87,7 +89,6 @@ public class SpawnController : MonoBehaviour
                 door.SetActive(true);
                 GetComponent<BoxCollider2D>().enabled = false;
             }
-            wave--;
         }
     }   
     void enemiesWeight()

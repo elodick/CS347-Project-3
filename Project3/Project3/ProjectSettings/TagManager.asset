@@ -10,6 +10,11 @@ TagManager:
   - EnemyBullet
   - RWall
   - LWall
+  - playerbullet
+  - spawnpoint
+  - EnemyParent
+  - projectile
+  - drop
   layers:
   - Default
   - TransparentFX

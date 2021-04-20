@@ -13,10 +13,15 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
     public float angle;
     public Vector2 mouse;
+    public float moveSpeed, firingSpeed;
+    public int shotType, damageReceived, damageDealt;
     // Start is called before the first frame update
     void Start()
     {
-
+        firingSpeed = 0.75f;
+        damageDealt = 2;
+        damageReceived = 2;
+        moveSpeed = 0.1f;
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
     }
 
@@ -44,7 +49,42 @@ public class PlayerController : MonoBehaviour
         {
             timer = 0.2f;
             spriteRenderer.color = new Color(1, 0, 0, 1);
-            health--;
+            health -= damageReceived;
+        }
+        if (collision.gameObject.CompareTag("drop"))
+        {
+            var dropType = collision.gameObject.GetComponent<DropController>().dropType;
+
+            switch (dropType)
+            {
+                case 0:
+                    health += 3;
+                    break;
+                case 1:
+                    damageReceived -= 1;
+                    break;
+                case 2:
+                    // destroy all enemies
+                    break;
+                case 3:
+                    shotType = 2;
+                    break;
+                case 4:
+                    shotType = 1;
+                    break;
+                case 5:
+                    // enable invincibility
+                    break;
+                case 6:
+                    damageDealt++;
+                    break;
+                case 7:
+                    moveSpeed += 0.05f;
+                    break;
+                case 8:
+                    firingSpeed -= 0.25f;
+                    break;
+            }
         }
     }
 }

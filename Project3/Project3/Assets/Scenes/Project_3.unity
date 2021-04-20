@@ -1133,11 +1133,12 @@ GameObject:
   - component: {fileID: 252996630}
   - component: {fileID: 252996629}
   - component: {fileID: 252996627}
+  - component: {fileID: 252996628}
   - component: {fileID: 252996626}
   - component: {fileID: 252996625}
   - component: {fileID: 252996624}
   - component: {fileID: 252996623}
-  - component: {fileID: 252996628}
+  - component: {fileID: 252996631}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1327,6 +1328,11 @@ MonoBehaviour:
   cam: {fileID: 1305149769}
   angle: 0
   mouse: {x: 0, y: 0}
+  moveSpeed: 0
+  firingSpeed: 0
+  shotType: 0
+  damageReceived: 0
+  damageDealt: 0
 --- !u!114 &252996628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,7 +1345,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e83b61d44e2b9240a561bc93dceedec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.1
   rb: {fileID: 252996624}
   cam: {fileID: 1305149769}
 --- !u!212 &252996629
@@ -1406,6 +1411,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252996631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252996622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cc0296e7b194364395de899e09dea66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &279094827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2267,6 +2284,24 @@ MonoBehaviour:
   cooldown: 0
   timer: 0
   weight: 0
+  healthdrop: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2,
+    type: 3}
+  damageReducdrop: {fileID: 5001525269949934835, guid: 88fbf109e57ec7b419c163fd1a13e68d,
+    type: 3}
+  bombdrop: {fileID: 1432496979767034970, guid: 3de55bde9b7515041a917bea511ad45d,
+    type: 3}
+  laserdrop: {fileID: 6013268452017797702, guid: 4b634b8a26e35e346a73cf227d21b4ec,
+    type: 3}
+  shotgundrop: {fileID: 3071788706176606771, guid: 1cab3590df5f24b4fbf6a926149e0846,
+    type: 3}
+  invincdrop: {fileID: 7156589474906227459, guid: 5189ab85499b37049bb3393b9ea272d7,
+    type: 3}
+  damageUpdrop: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211,
+    type: 3}
+  speedupdrop: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27,
+    type: 3}
+  firingspeedupdrop: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+    type: 3}
   bullet: {fileID: 3730504507996323956, guid: 167d76dc7ea9eaa4e9967a355c41e4a5, type: 3}
 --- !u!212 &575178240
 SpriteRenderer:
@@ -3015,6 +3050,10 @@ MonoBehaviour:
   totalWeight: 15
   weight: 0
   originalEnemyCount: 0
+  mean: 5
+  variance: 1
+  maxIters: 20
+  numRects: 8
 --- !u!61 &896036690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3726,6 +3765,24 @@ MonoBehaviour:
   cooldown: 1
   timer: 0
   weight: 3
+  healthdrop: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2,
+    type: 3}
+  damageReducdrop: {fileID: 5001525269949934835, guid: 88fbf109e57ec7b419c163fd1a13e68d,
+    type: 3}
+  bombdrop: {fileID: 1432496979767034970, guid: 3de55bde9b7515041a917bea511ad45d,
+    type: 3}
+  laserdrop: {fileID: 6013268452017797702, guid: 4b634b8a26e35e346a73cf227d21b4ec,
+    type: 3}
+  shotgundrop: {fileID: 3071788706176606771, guid: 1cab3590df5f24b4fbf6a926149e0846,
+    type: 3}
+  invincdrop: {fileID: 7156589474906227459, guid: 5189ab85499b37049bb3393b9ea272d7,
+    type: 3}
+  damageUpdrop: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211,
+    type: 3}
+  speedupdrop: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27,
+    type: 3}
+  firingspeedupdrop: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+    type: 3}
   enemy_projectile: {fileID: 756808830172905220, guid: c26ee019ef59b6f4da05afb0aac59faf,
     type: 3}
   numberOfProjectiles: 12
@@ -6069,6 +6126,60 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
         type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: damageReducdrop
+      value: 
+      objectReference: {fileID: 5001525269949934835, guid: 88fbf109e57ec7b419c163fd1a13e68d,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: damageUpdrop
+      value: 
+      objectReference: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: bombdrop
+      value: 
+      objectReference: {fileID: 1432496979767034970, guid: 3de55bde9b7515041a917bea511ad45d,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: healthdrop
+      value: 
+      objectReference: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: invincdrop
+      value: 
+      objectReference: {fileID: 7156589474906227459, guid: 5189ab85499b37049bb3393b9ea272d7,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: laserdrop
+      value: 
+      objectReference: {fileID: 6013268452017797702, guid: 4b634b8a26e35e346a73cf227d21b4ec,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: shotgundrop
+      value: 
+      objectReference: {fileID: 3071788706176606771, guid: 1cab3590df5f24b4fbf6a926149e0846,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: speedupdrop
+      value: 
+      objectReference: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27,
+        type: 3}
+    - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: firingspeedupdrop
+      value: 
+      objectReference: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+        type: 3}
     - target: {fileID: 6648334737259910493, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
         type: 3}
       propertyPath: m_Layer
@@ -6235,6 +6346,60 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
         type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: damageReducdrop
+      value: 
+      objectReference: {fileID: 5001525269949934835, guid: 88fbf109e57ec7b419c163fd1a13e68d,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: damageUpdrop
+      value: 
+      objectReference: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: bombdrop
+      value: 
+      objectReference: {fileID: 1432496979767034970, guid: 3de55bde9b7515041a917bea511ad45d,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: healthdrop
+      value: 
+      objectReference: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: invincdrop
+      value: 
+      objectReference: {fileID: 7156589474906227459, guid: 5189ab85499b37049bb3393b9ea272d7,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: laserdrop
+      value: 
+      objectReference: {fileID: 6013268452017797702, guid: 4b634b8a26e35e346a73cf227d21b4ec,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: shotgundrop
+      value: 
+      objectReference: {fileID: 3071788706176606771, guid: 1cab3590df5f24b4fbf6a926149e0846,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: speedupdrop
+      value: 
+      objectReference: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27,
+        type: 3}
+    - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: firingspeedupdrop
+      value: 
+      objectReference: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+        type: 3}
     - target: {fileID: 4098936763124751658, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
       propertyPath: m_Color.g
@@ -6388,6 +6553,24 @@ MonoBehaviour:
   cooldown: 0
   timer: 0
   weight: 1
+  healthdrop: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2,
+    type: 3}
+  damageReducdrop: {fileID: 5001525269949934835, guid: 88fbf109e57ec7b419c163fd1a13e68d,
+    type: 3}
+  bombdrop: {fileID: 1432496979767034970, guid: 3de55bde9b7515041a917bea511ad45d,
+    type: 3}
+  laserdrop: {fileID: 6013268452017797702, guid: 4b634b8a26e35e346a73cf227d21b4ec,
+    type: 3}
+  shotgundrop: {fileID: 3071788706176606771, guid: 1cab3590df5f24b4fbf6a926149e0846,
+    type: 3}
+  invincdrop: {fileID: 7156589474906227459, guid: 5189ab85499b37049bb3393b9ea272d7,
+    type: 3}
+  damageUpdrop: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211,
+    type: 3}
+  speedupdrop: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27,
+    type: 3}
+  firingspeedupdrop: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+    type: 3}
   attackRange: 3
   lungeDelay: 2
   distanceToPlayer: 0
@@ -6525,6 +6708,24 @@ MonoBehaviour:
   cooldown: 0.5
   timer: 0
   weight: 2
+  healthdrop: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2,
+    type: 3}
+  damageReducdrop: {fileID: 5001525269949934835, guid: 88fbf109e57ec7b419c163fd1a13e68d,
+    type: 3}
+  bombdrop: {fileID: 1432496979767034970, guid: 3de55bde9b7515041a917bea511ad45d,
+    type: 3}
+  laserdrop: {fileID: 6013268452017797702, guid: 4b634b8a26e35e346a73cf227d21b4ec,
+    type: 3}
+  shotgundrop: {fileID: 3071788706176606771, guid: 1cab3590df5f24b4fbf6a926149e0846,
+    type: 3}
+  invincdrop: {fileID: 7156589474906227459, guid: 5189ab85499b37049bb3393b9ea272d7,
+    type: 3}
+  damageUpdrop: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211,
+    type: 3}
+  speedupdrop: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27,
+    type: 3}
+  firingspeedupdrop: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+    type: 3}
   projectile_wave: {fileID: 1087563730471086723, guid: 0ed823d5ecf08c741936bdfdb12dcc0f,
     type: 3}
   amplitude: 3

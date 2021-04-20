@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
     public float cooldown;
     public float timer;
     public int weight;
-
+    public GameObject healthdrop, damageReducdrop, bombdrop, laserdrop, shotgundrop, invincdrop, damageUpdrop, speedupdrop, firingspeedupdrop;
     // Start is called before the first frame update
     virtual protected void Start()
     {
@@ -57,14 +57,7 @@ public class EnemyController : MonoBehaviour
         {
             timer = 0.1f;
             spriteRenderer.color = new Color(1, 0, 0, 1);
-            health -=2 ;
-        }
-
-        if (collision.gameObject.CompareTag("playerpellet"))
-        {
-            timer = 0.1f;
-            spriteRenderer.color = new Color(1, 0, 0, 1);
-            health -= 1;
+            health -= player.GetComponent<PlayerController>().damageDealt;
         }
     }
 
@@ -81,6 +74,37 @@ public class EnemyController : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(dropPrefab, transform.position, transform.rotation);
+        var itemToDrop = Random.Range(0, 8);
+        switch (itemToDrop)
+        {
+            case 0:
+                Instantiate(healthdrop, transform.position, transform.rotation);
+                break;
+            case 1:
+                Instantiate(damageReducdrop, transform.position, transform.rotation);
+                break;
+            case 2:
+                Instantiate(bombdrop, transform.position, transform.rotation);
+                break;
+            case 3:
+                Instantiate(laserdrop, transform.position, transform.rotation);
+                break;
+            case 4:
+                Instantiate(shotgundrop, transform.position, transform.rotation);
+                break;
+            case 5:
+                Instantiate(invincdrop, transform.position, transform.rotation);
+                break;
+            case 6:
+                Instantiate(damageUpdrop, transform.position, transform.rotation);
+                break;
+            case 7:
+                Instantiate(speedupdrop, transform.position, transform.rotation);
+                break;
+            case 8:
+                Instantiate(firingspeedupdrop, transform.position, transform.rotation);
+                break;
+
+        }
     }
 }
