@@ -8,7 +8,7 @@ public class Boss1_Attack : MonoBehaviour
     GameObject ChaseEnemy;
 
     [SerializeField]            
-    GameObject Bullet;
+    GameObject Bullet, ExplosiveBullet;
 
     [SerializeField]        //Bullet speed
     public float BSpeed;
@@ -65,6 +65,8 @@ public class Boss1_Attack : MonoBehaviour
     {
         GameObject Enemy1 = Instantiate(ChaseEnemy);
         GameObject Enemy2 = Instantiate(ChaseEnemy);
+        Enemy1.gameObject.transform.localScale = new Vector2(5,5); //scale up the slime size 
+        Enemy2.gameObject.transform.localScale = new Vector2(5, 5);
         Enemy1.transform.position = Spawn1.transform.position;
         Enemy2.transform.position = Spawn2.transform.position;
     }
@@ -82,6 +84,15 @@ public class Boss1_Attack : MonoBehaviour
                     bullet3.transform.position = ShootM.transform.position;
                  bullet3.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -BSpeed, 0);
 
+    }
+    public void ShootExplosion()
+    {
+        GameObject bullet1 = Instantiate(ExplosiveBullet);
+        bullet1.transform.position = ShootL.transform.position;
+        bullet1.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -5, 0);
+        GameObject bullet2 = Instantiate(ExplosiveBullet);
+        bullet2.transform.position = ShootR.transform.position;
+        bullet2.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -5, 0);
     }
 
 }

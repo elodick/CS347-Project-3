@@ -162,7 +162,18 @@ public class Boss1_Main : MonoBehaviour
        if(Phase2)
         {
             int x = Random.Range(1, 21);
-            
+            if( x< 7)
+            {
+                Boss.GetComponent<Boss1_Attack>().ShootBullets();
+            }
+            if(x>7 && x<14)
+            {
+                Boss.GetComponent<Boss1_Attack>().SpawnEnemies();
+            }
+            if(x> 14)
+            {
+                Boss.GetComponent<Boss1_Attack>().ShootExplosion();
+            }
         }
        
         
