@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoomController : MonoBehaviour
+public class SpawnController : MonoBehaviour
 {
     public List<GameObject> enemies;
     public List<GameObject> spawnpoints;
@@ -13,7 +13,7 @@ public class RoomController : MonoBehaviour
     public int enemiesCount;
     public int totalWeight;
     public int weight;
-    private int originalEnemyCount;
+    public int originalEnemyCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +29,13 @@ public class RoomController : MonoBehaviour
         {
             door.SetActive(false);
         }
-        if (enemiesCount != 3)
+        if (enemiesCount != originalEnemyCount)
             door.SetActive(true);
         if (wave > 0 && enemiesCount == originalEnemyCount)
         {
             spawntrigger.SetActive(true);
             GetComponent<BoxCollider2D>().enabled = true;
+            weight = 0;
         }
         enemies = new List<GameObject>();
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
@@ -48,7 +49,8 @@ public class RoomController : MonoBehaviour
     void spawnEnemy()
     {
         enemiesWeight();
-        int numToSpawn = 5;
+        float probabilityNum = Probabilities.RandomNormalVariable(4, 6, 5, 20);
+        int numToSpawn = Mathf.RoundToInt(probabilityNum);
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
         {
@@ -60,12 +62,17 @@ public class RoomController : MonoBehaviour
             var randSpawnLoc = Random.Range(0, spawnpoints.Count);
             if (totalWeight - weight < enemies[randNumSpawn].GetComponent<EnemyController>().weight)
             {
-                enemies.RemoveAt(randNumSpawn);
                 randNumSpawn = Random.Range(0, enemies.Count);
-            }    
-            Instantiate(enemies[randNumSpawn], spawnpoints[randSpawnLoc].transform.position, Quaternion.identity);
-            spawnpoints.RemoveAt(randSpawnLoc);
+            }
+            else
+            {
+                Instantiate(enemies[randNumSpawn], spawnpoints[randSpawnLoc].transform.position, Quaternion.identity);
+                enemies[randNumSpawn].SetActive(true);
+                spawnpoints.RemoveAt(randSpawnLoc);
+            }
         }
+
+        
         enemiesWeight();
     }
 

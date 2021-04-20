@@ -31,7 +31,7 @@ public class Heart_Manage : MonoBehaviour
     void Start()
     {
        // Player = gameObject.transform.parent.gameObject;
-        Health = Player.GetComponent<PlayerMovementDylan>().Health;
+        Health = Player.GetComponent<PlayerController>().health;
         Hearts = Health; 
     }
 

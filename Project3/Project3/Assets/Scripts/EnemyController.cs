@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     protected Transform selfTransform;
     public Behavior behavior;
 
+    public GameObject dropPrefab;
     private SpriteRenderer spriteRenderer;
 
     public int health;
@@ -20,6 +21,7 @@ public class EnemyController : MonoBehaviour
     public float cooldown;
     public float timer;
     public int weight;
+
     // Start is called before the first frame update
     virtual protected void Start()
     {
@@ -42,6 +44,7 @@ public class EnemyController : MonoBehaviour
             spriteRenderer.color = new Color(1, 1, 1, 1);
         if (health <= 0)
             Destroy(gameObject);
+        Aggro();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -63,5 +66,21 @@ public class EnemyController : MonoBehaviour
             spriteRenderer.color = new Color(1, 0, 0, 1);
             health -= 1;
         }
+    }
+
+    void Aggro()
+    {
+        var selfPosition = selfTransform.position;
+        var playerPosition = playerTransform.position;
+        var distanceToPlayer = Vector2.Distance(selfPosition, playerPosition);
+        if (distanceToPlayer <= aggroDistance)
+        {
+            behavior = Behavior.ATTACK;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        Instantiate(dropPrefab, transform.position, transform.rotation);
     }
 }

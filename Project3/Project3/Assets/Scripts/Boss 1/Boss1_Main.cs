@@ -98,6 +98,11 @@ public class Boss1_Main : MonoBehaviour
         {
             Phase1 = false;
             Phase2 = true;
+            if (Speed == 0.1f)
+            {
+                Speed += 0.1f;
+                BaseMoveTime -= 1f;
+            }
         }
         if (MoveTime <= 0 ) // Reset Move Time and swap move directions
         {
