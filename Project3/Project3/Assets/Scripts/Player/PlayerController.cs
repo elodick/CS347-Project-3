@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public int health;
+    public int health, MaxHealth;
     private float timer;
     SpriteRenderer spriteRenderer;
 
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
         firingSpeed = 0.75f;
         damageDealt = 2;
         damageReceived = 2;
+        health = MaxHealth;
         moveSpeed = 0.1f;
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
     }
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
             switch (dropType)
             {
                 case 0:
-                    health += 3;
+                    MaxHealth += 1;
                     break;
                 case 1:
                     damageReceived -= 1;

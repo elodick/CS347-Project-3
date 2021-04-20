@@ -9,6 +9,9 @@ public class Heart_Manage : MonoBehaviour
     [SerializeField]
     public int Health;
 
+    [SerializeField] //Current max health
+    public int MaxHealth;
+
     //Hearts to display
     [SerializeField]
     public int Hearts;
@@ -32,6 +35,7 @@ public class Heart_Manage : MonoBehaviour
     {
        // Player = gameObject.transform.parent.gameObject;
         Health = Player.GetComponent<PlayerController>().health;
+        MaxHealth = Player.GetComponent<PlayerController>().MaxHealth; 
         Hearts = Health; 
     }
 
@@ -41,20 +45,25 @@ public class Heart_Manage : MonoBehaviour
         // Continuously update player's current health status
         //Health = Player.GetComponent<PlayerMovementDylan>().Health; //This may be removed
         Hearts = Health;
-
+        Health = Player.GetComponent<PlayerController>().health;
+        MaxHealth = Player.GetComponent<PlayerController>().MaxHealth;
         for (int i = 0; i < HeartList.Length; i++)
         {
 
-            if(i<Health)
+            if(i<=Health)
             {
                 HeartList[i].sprite = Full;
             }
-            else
+            if(i>Health)
             {
                 HeartList[i].sprite = Empty;
             }
+            if(i> MaxHealth-1)
+            {
+                HeartList[i].gameObject.GetComponent<Renderer>().enabled = false;
+            }
 
-       
+       /*
             if (i < Hearts)
             {
                 HeartList[i].enabled = true;
@@ -63,10 +72,13 @@ public class Heart_Manage : MonoBehaviour
             {
                 HeartList[i].enabled = false;
             }
+       */
             
         }
 
     }
+
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
@@ -74,4 +86,5 @@ public class Heart_Manage : MonoBehaviour
             Health--; 
         }
     }
+    */
 }
