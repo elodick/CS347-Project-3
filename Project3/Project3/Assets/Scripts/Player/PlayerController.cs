@@ -10,14 +10,17 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
-    Text text;
+    Text PickupMes, CurrentWeapon;
+
+    [SerializeField]
+    public float MSBaseTime, MessageTimer;
 
     public Rigidbody2D rb;
     public Camera cam;
     public float angle;
     public Vector2 mouse;
-    public float moveSpeed, firingSpeed;
-    public int shotType, damageReceived, damageDealt;
+    public float moveSpeed, firingSpeed; //movement speed and firing speed. The lower the firing speed the faster the player can shoot
+    public int shotType, damageReceived, damageDealt; //ShotType is weapons
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +30,30 @@ public class PlayerController : MonoBehaviour
         health = MaxHealth;
         moveSpeed = 0.1f;
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        shotType = 0;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         mouse = cam.ScreenToWorldPoint(Input.mousePosition);
+        if (MessageTimer < 0)
+        {
+            PickupMes.text = "";
+        }
+        if(shotType == 0)
+            {
+            CurrentWeapon.text = "Current Weapon: Normal";
+             }
+        if (shotType == 1)
+        {
+            CurrentWeapon.text = "Current Weapon: Shotgun";
+        }
+        if (shotType == 2)
+        {
+            CurrentWeapon.text = "Current Weapon: FlameThrower";
+        }
     }
     private void FixedUpdate()
     {
@@ -45,6 +66,10 @@ public class PlayerController : MonoBehaviour
         angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
 
+        if(MessageTimer >=0)
+        {
+            MessageTimer -= Time.deltaTime;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,27 +91,40 @@ public class PlayerController : MonoBehaviour
                     DisplayAcquired("Health increased");
                     break;
                 case 1:
+                    if(damageReceived == 1)
+                    {
+                        //Because damage recieved can't be below 1, this could instead call temporary invincibilty;
+                        break;
+                    }
+                    DisplayAcquired("Damage Reduction");
                     damageReceived -= 1;
+                    
                     break;
                 case 2:
                     // destroy all enemies
                     break;
                 case 3:
+                    DisplayAcquired("Flame Thrower!");
                     shotType = 2;
                     break;
                 case 4:
                     shotType = 1;
+                    DisplayAcquired("Spread Shot!");
                     break;
                 case 5:
                     // enable invincibility
+                    DisplayAcquired("Temporary Invincibility");
                     break;
                 case 6:
                     damageDealt++;
+                    DisplayAcquired("Damage Increased!");
                     break;
                 case 7:
                     moveSpeed += 0.05f;
+                    DisplayAcquired("Increased MoveSpeed!");
                     break;
                 case 8:
+                    DisplayAcquired("Increased FireRate!");
                     firingSpeed -= 0.25f;
                     break;
             }
@@ -94,6 +132,8 @@ public class PlayerController : MonoBehaviour
     }
     public void DisplayAcquired(string mes)
     {
-        text.text = mes;
+        MessageTimer = MSBaseTime;
+        PickupMes.text = mes;
+       
     }
 }
