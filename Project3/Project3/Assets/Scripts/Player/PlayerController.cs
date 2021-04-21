@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public int health, MaxHealth;
     private float timer;
     SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    Text text;
 
     public Rigidbody2D rb;
     public Camera cam;
@@ -60,6 +63,7 @@ public class PlayerController : MonoBehaviour
             {
                 case 0:
                     MaxHealth += 1;
+                    DisplayAcquired("Health increased");
                     break;
                 case 1:
                     damageReceived -= 1;
@@ -87,5 +91,9 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
+    }
+    public void DisplayAcquired(string mes)
+    {
+        text.text = mes;
     }
 }

@@ -52,15 +52,17 @@ public class Heart_Manage : MonoBehaviour
 
             if(i<=Health)
             {
+                HeartList[i].gameObject.SetActive(true);
                 HeartList[i].sprite = Full;
             }
             if(i>Health)
             {
+                HeartList[i].gameObject.SetActive(true);
                 HeartList[i].sprite = Empty;
             }
-            if(i> MaxHealth-1)
+            if(i> MaxHealth)
             {
-                HeartList[i].gameObject.GetComponent<Renderer>().enabled = false;
+                HeartList[i].gameObject.SetActive(false);
             }
 
        /*
