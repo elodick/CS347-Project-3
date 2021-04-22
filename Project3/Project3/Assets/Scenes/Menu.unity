@@ -999,8 +999,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &447511397
-RectTransform:
+--- !u!4 &447511397
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1013,11 +1013,6 @@ RectTransform:
   m_Father: {fileID: 70060125}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &447511398
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1030,7 +1025,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5593046323003379949, guid: bdf0db190944c804d8fcabbddbf7ce1a,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 028781cc920abad42be787c622eb39f5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1653,7 +1648,7 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: -33.2
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4568,8 +4563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e142264a7c6f14286e66d516608889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSceneIndex: 1
-  maxSceneIndex: 3
 --- !u!1 &2093926107
 GameObject:
   m_ObjectHideFlags: 0
