@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public int health, MaxHealth;
-    private float timer;
+    public float timer, shieldtimer;
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
@@ -15,10 +15,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float MSBaseTime, MessageTimer;
 
+    public GameObject invincibleShield, bomb;
     public Rigidbody2D rb;
     public Camera cam;
     public float angle;
     public Vector2 mouse;
+    private bool invulnerable;
     public float moveSpeed, firingSpeed; //movement speed and firing speed. The lower the firing speed the faster the player can shoot
     public int shotType, damageReceived, damageDealt; //ShotType is weapons
     // Start is called before the first frame update
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
         //if (health <= 0)
             //SceneManager.LoadScene("SampleScene");
         timer -= Time.deltaTime;
+        shieldtimer -= Time.deltaTime;
         if (timer <= 0)
             spriteRenderer.color = new Color(1, 1, 1, 1);
         Vector2 lookdir = mouse - rb.position;
@@ -70,11 +73,17 @@ public class PlayerController : MonoBehaviour
         {
             MessageTimer -= Time.deltaTime;
         }
+
+        if (shieldtimer <= 0)
+        {
+            invincibleShield.SetActive(false);
+            invulnerable = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("projectile"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("projectile") && !invulnerable)
         {
             timer = 0.2f;
             spriteRenderer.color = new Color(1, 0, 0, 1);
@@ -112,7 +121,9 @@ public class PlayerController : MonoBehaviour
                     DisplayAcquired("Spread Shot!");
                     break;
                 case 5:
-                    // enable invincibility
+                    shieldtimer = 5.0f;
+                    invincibleShield.SetActive(true);
+                    invulnerable = true;
                     DisplayAcquired("Temporary Invincibility");
                     break;
                 case 6:
