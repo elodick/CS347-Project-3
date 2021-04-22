@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     private string[] scenes;
-    private int nextSceneIndex;
+    private List<int> scenesTraversed;
+    public int minSceneIndex;
+    public int maxSceneIndex;
+    public bool bossNext;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,19 +21,26 @@ public class SceneController : MonoBehaviour
         scenes[4] = "Stage2_1";
         scenes[5] = "BossStage";
 
-        nextSceneIndex = 1;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        bossNext = false;                
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        nextSceneIndex++;
-        SceneManager.LoadScene(scenes[nextSceneIndex]);
+        scenesTraversed.Add(SceneManager.GetActiveScene().buildIndex);
+        if (scenesTraversed.Count >= (maxSceneIndex - minSceneIndex))
+            bossNext = true;
+        SceneManager.LoadScene(scenes[nextSceneIndex()]);
         GameObject.Find("Player").transform.position = new Vector3(0, 0, -1);
     }
+
+    private int nextSceneIndex()
+    {
+        int index = Random.Range(minSceneIndex, maxSceneIndex);
+        while(scenesTraversed.Contains(index))
+            index = Random.Range(minSceneIndex, maxSceneIndex);
+        if (bossNext)
+            index = 5;
+        return index;
+    }
 }
+
