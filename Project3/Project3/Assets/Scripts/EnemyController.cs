@@ -60,6 +60,11 @@ public class EnemyController : MonoBehaviour
             spriteRenderer.color = new Color(1, 0, 0, 1);
             health -= player.GetComponent<PlayerController>().damageDealt;
         }
+
+        if (collision.gameObject.CompareTag("bomb"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Aggro()
@@ -91,7 +96,6 @@ public class EnemyController : MonoBehaviour
                     Instantiate(bombdrop, transform.position, transform.rotation);
                     break;
                 case 3:
-                    Instantiate(laserdrop, transform.position, transform.rotation);
                     break;
                 case 4:
                     Instantiate(shotgundrop, transform.position, transform.rotation);

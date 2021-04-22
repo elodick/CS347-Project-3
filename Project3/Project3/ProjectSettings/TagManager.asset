@@ -16,6 +16,7 @@ TagManager:
   - projectile
   - drop
   - endoflevel
+  - bomb
   layers:
   - Default
   - TransparentFX

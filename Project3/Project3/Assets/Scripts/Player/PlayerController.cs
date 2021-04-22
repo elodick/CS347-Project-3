@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public int health, MaxHealth;
-    public float timer, shieldtimer;
+    public float timer, shieldtimer, bombtimer;
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
             //SceneManager.LoadScene("SampleScene");
         timer -= Time.deltaTime;
         shieldtimer -= Time.deltaTime;
+        bombtimer -= Time.deltaTime;
         if (timer <= 0)
             spriteRenderer.color = new Color(1, 1, 1, 1);
         Vector2 lookdir = mouse - rb.position;
@@ -110,7 +111,6 @@ public class PlayerController : MonoBehaviour
                     
                     break;
                 case 2:
-                    // destroy all enemies
                     break;
                 case 3:
                     DisplayAcquired("Flame Thrower!");
@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
                     break;
                 case 4:
                     shotType = 1;
+                    GetComponent<Shoot>().numOfSpread++;
                     DisplayAcquired("Spread Shot!");
                     break;
                 case 5:
@@ -140,11 +141,15 @@ public class PlayerController : MonoBehaviour
                     break;
             }
         }
+
+        if (collision.gameObject.CompareTag("bomb"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider2D>());
+        }
     }
     public void DisplayAcquired(string mes)
     {
         MessageTimer = MSBaseTime;
         PickupMes.text = mes;
-       
     }
 }
