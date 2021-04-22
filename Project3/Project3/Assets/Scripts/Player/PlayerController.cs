@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public int health, MaxHealth;
-    private float timer;
+    public float timer, shieldtimer, bombtimer;
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
@@ -15,19 +15,24 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public float MSBaseTime, MessageTimer;
 
+
     private string
     bdam = "Damage: ", bfir = "FireRate: ", bmov = "MoveSpeed: ";
+
+
+    public GameObject invincibleShield, bomb;
 
     public Rigidbody2D rb;
     public Camera cam;
     public float angle;
     public Vector2 mouse;
+    private bool invulnerable;
     public float moveSpeed, firingSpeed; //movement speed and firing speed. The lower the firing speed the faster the player can shoot
     public int shotType, damageReceived, damageDealt; //ShotType is weapons
     // Start is called before the first frame update
     void Start()
     {
-        firingSpeed = 0.75f;
+        firingSpeed = 0.25f;
         damageDealt = 2;
         damageReceived = 2;
         health = MaxHealth;
@@ -37,6 +42,10 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void Awake()
+    {
+         DontDestroyOnLoad(transform.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -64,6 +73,8 @@ public class PlayerController : MonoBehaviour
         //if (health <= 0)
             //SceneManager.LoadScene("SampleScene");
         timer -= Time.deltaTime;
+        shieldtimer -= Time.deltaTime;
+        bombtimer -= Time.deltaTime;
         if (timer <= 0)
             spriteRenderer.color = new Color(1, 1, 1, 1);
         Vector2 lookdir = mouse - rb.position;
@@ -74,11 +85,17 @@ public class PlayerController : MonoBehaviour
         {
             MessageTimer -= Time.deltaTime;
         }
+
+        if (shieldtimer <= 0)
+        {
+            invincibleShield.SetActive(false);
+            invulnerable = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("projectile"))
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("projectile") && !invulnerable)
         {
             timer = 0.2f;
             spriteRenderer.color = new Color(1, 0, 0, 1);
@@ -106,7 +123,6 @@ public class PlayerController : MonoBehaviour
                     
                     break;
                 case 2:
-                    // destroy all enemies
                     break;
                 case 3:
                     DisplayAcquired("Flame Thrower!");
@@ -114,10 +130,13 @@ public class PlayerController : MonoBehaviour
                     break;
                 case 4:
                     shotType = 1;
+                    GetComponent<Shoot>().numOfSpread++;
                     DisplayAcquired("Spread Shot!");
                     break;
                 case 5:
-                    // enable invincibility
+                    shieldtimer = 5.0f;
+                    invincibleShield.SetActive(true);
+                    invulnerable = true;
                     DisplayAcquired("Temporary Invincibility");
                     break;
                 case 6:
@@ -130,16 +149,20 @@ public class PlayerController : MonoBehaviour
                     break;
                 case 8:
                     DisplayAcquired("Increased FireRate!");
-                    firingSpeed -= 0.25f;
+                    firingSpeed -= 0.1f;
                     break;
             }
+        }
+
+        if (collision.gameObject.CompareTag("bomb"))
+        {
+            Physics2D.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider2D>());
         }
     }
     public void DisplayAcquired(string mes)
     {
         MessageTimer = MSBaseTime;
         PickupMes.text = mes;
-       
     }
     public void DisplayStats()
     {

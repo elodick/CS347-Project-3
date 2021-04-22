@@ -12,6 +12,10 @@ public class CameraController : MonoBehaviour
         target = GameObject.Find("Player");
     }
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(transform.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {

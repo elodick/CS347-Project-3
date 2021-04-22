@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public int minSceneIndex = 1;
     public int maxSceneIndex = 3;
     private static System.Random uniform = new System.Random();
+
     public void PlayGame()
     {
         SceneManager.LoadScene(uniform.Next(minSceneIndex, maxSceneIndex));
