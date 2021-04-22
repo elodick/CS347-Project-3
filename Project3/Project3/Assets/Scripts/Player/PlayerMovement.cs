@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     {
         speed = GetComponent<PlayerController>().moveSpeed;
         Vector2 lookdir = mouse - rb.position;
-        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg - 90f;
+        float angle = Mathf.Atan2(lookdir.y, lookdir.x) * Mathf.Rad2Deg-260f;
         rb.rotation = angle;
     }
 
