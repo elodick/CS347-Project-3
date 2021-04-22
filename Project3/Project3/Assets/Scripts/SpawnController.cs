@@ -55,7 +55,13 @@ public class SpawnController : MonoBehaviour
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
         {
-            spawnpoints.Add(spawn);
+
+            var distanceFromSpawnToPlayer = Vector2.Distance(GameObject.Find("Player").transform.position, spawn.transform.position);
+            if (distanceFromSpawnToPlayer <= 20)
+            {
+
+                spawnpoints.Add(spawn);
+            }
         }
         for (int i = 0; i < numToSpawn; i++)
         {
@@ -98,4 +104,5 @@ public class SpawnController : MonoBehaviour
             weight += enemy.GetComponent<EnemyController>().weight;
         }
     }
+
 }

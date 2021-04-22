@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4098936763124751657}
   - component: {fileID: 4098936763124751656}
   - component: {fileID: 4098936763124751663}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ChasingEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,10 +95,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1097b613421bc9b4eb6c42d407c62419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  agroRange: 6
-  speed: 0.5
+  behavior: 0
+  dropPrefab: {fileID: 0}
   health: 3
+  speed: 0.5
+  aggroDistance: 0
+  firingSpeed: 0
+  cooldown: 0
+  timer: 0
+  weight: 0
+  healthdrop: {fileID: 0}
+  damageReducdrop: {fileID: 0}
+  bombdrop: {fileID: 0}
+  laserdrop: {fileID: 0}
+  shotgundrop: {fileID: 0}
+  invincdrop: {fileID: 0}
+  damageUpdrop: {fileID: 0}
+  speedupdrop: {fileID: 0}
+  firingspeedupdrop: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!50 &4098936763124751656
 Rigidbody2D:
   serializedVersion: 4

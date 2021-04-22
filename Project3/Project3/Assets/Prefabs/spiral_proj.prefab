@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 756808830172905221}
   - component: {fileID: 756808830172905224}
   - component: {fileID: 756808830172905225}
-  m_Layer: 8
-  m_Name: enemy_projectile
+  m_Layer: 9
+  m_Name: spiral_proj
   m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

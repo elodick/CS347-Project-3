@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
                     break;
                 case 3:
                     DisplayAcquired("Flame Thrower!");
-                    shotType = 2;
+                    shotType = 1;
                     break;
                 case 4:
                     shotType = 1;
