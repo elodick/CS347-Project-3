@@ -15,6 +15,7 @@ public class ChaseAI : EnemyController
     {
         base.Start();
         rb = GetComponent<Rigidbody2D>();
+        Player = GameObject.Find("Player").transform;
     }
 
     // Update is called once per frame

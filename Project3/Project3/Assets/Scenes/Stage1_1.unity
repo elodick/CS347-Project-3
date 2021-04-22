@@ -374,7 +374,7 @@ MonoBehaviour:
   behavior: 0
   dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
     type: 3}
-  health: 10
+  health: 6
   canDrop: 0
   speed: 0
   aggroDistance: 15
@@ -877,7 +877,7 @@ MonoBehaviour:
   behavior: 0
   dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
     type: 3}
-  health: 10
+  health: 6
   canDrop: 0
   speed: 0
   aggroDistance: 15
@@ -18745,7 +18745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838910242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -0.18, z: -1}
+  m_LocalPosition: {x: 0.03, y: 0.06, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 560996461}
@@ -27368,7 +27368,7 @@ PrefabInstance:
     - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
       propertyPath: health
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4098936763124751657, guid: 149bd34d29a47f04897906526dfbbb3a,
         type: 3}
@@ -27622,7 +27622,7 @@ PrefabInstance:
     - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
         type: 3}
       propertyPath: health
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6648334737974260764, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
         type: 3}
@@ -28141,7 +28141,7 @@ MonoBehaviour:
   behavior: 0
   dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
     type: 3}
-  health: 5
+  health: 6
   canDrop: 0
   speed: 0
   aggroDistance: 25
@@ -28495,6 +28495,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+  - component: {fileID: 1679697469}
+  - component: {fileID: 1679697468}
   - component: {fileID: 1679697467}
   m_Layer: 0
   m_Name: UI
@@ -28503,21 +28505,46 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1679697467
-Transform:
+--- !u!114 &1679697467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679697466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4a6f9bfdf7d7846a74362f43ff5a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!222 &1679697468
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679697466}
+  m_CullTransparentMesh: 0
+--- !u!224 &1679697469
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679697466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 351.27692, y: 221.85266, z: -334.8875}
+  m_LocalPosition: {x: 0, y: 0, z: -334.8875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1801778603}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 703, y: 279}
+  m_SizeDelta: {x: 196.2, y: 21.4}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1685888290
 GameObject:
   m_ObjectHideFlags: 0
@@ -28824,7 +28851,7 @@ MonoBehaviour:
   behavior: 0
   dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
     type: 3}
-  health: 10
+  health: 6
   canDrop: 0
   speed: 5
   aggroDistance: 25
@@ -29098,7 +29125,7 @@ RectTransform:
   m_Children:
   - {fileID: 1194220838}
   - {fileID: 2039561855}
-  m_Father: {fileID: 1679697467}
+  m_Father: {fileID: 1679697469}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
