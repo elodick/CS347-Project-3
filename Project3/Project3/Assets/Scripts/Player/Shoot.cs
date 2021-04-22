@@ -26,12 +26,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void FixedUpdate()
-    {
-        timer -= Time.deltaTime;
+        timer -= Time.deltaTime; 
         firingSpeed = GetComponent<PlayerController>().firingSpeed;
         var shotType = GameObject.Find("Player").GetComponent<PlayerController>().shotType;
         switch (shotType)
@@ -45,6 +40,11 @@ public class Shoot : MonoBehaviour
                     SpreadShot();
                 break;
         }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
     
     void BasicShot()

@@ -30,10 +30,13 @@ public class SceneController : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        scenesTraversed[currentRun] = SceneManager.GetActiveScene().buildIndex;
-        currentRun++;
-        SceneManager.LoadScene(NextSceneIndex());
-        GameObject.Find("Player").transform.position = new Vector3(0, 0, -1);
+        if (collision.collider.CompareTag("Player"))
+        {
+            scenesTraversed[currentRun] = SceneManager.GetActiveScene().buildIndex;
+            currentRun++;
+            SceneManager.LoadScene(NextSceneIndex());
+            GameObject.Find("Player").transform.position = new Vector3(0, 0, -1);
+        }
     }
 
     private int NextSceneIndex()
