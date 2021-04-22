@@ -170,4 +170,4 @@ public class PlayerController : MonoBehaviour
         Display_FireRate.text = bfir +firingSpeed; 
         Display_MoveSpeed.text = bmov+moveSpeed;
     }
-}//Display_Damage, Display_FireRate, Display_MoveSpeed;
+}

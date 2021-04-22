@@ -178,5 +178,11 @@ MonoBehaviour:
   closed: {fileID: 4644995195737980118, guid: a4ae79d32c985f7469feb8d913d47abd, type: 3}
   open: {fileID: 2592730141682180124, guid: a4ae79d32c985f7469feb8d913d47abd, type: 3}
   IsOpen: 0
+  DecideItem: 0
   item: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2, type: 3}
   itemSpawn: {fileID: 3324287321341031943}
+  health: {fileID: 2705731849612842234, guid: 5006822fb3754e14b8e8c27e8765f3b2, type: 3}
+  speed: {fileID: 5340259842029392770, guid: 1cb7fa61b3135064c90a8b5f2644fb27, type: 3}
+  FireRate: {fileID: 6968041963059877871, guid: d79a526bbb6141645920faa106c98e26,
+    type: 3}
+  damage: {fileID: 540325967297398274, guid: b02ce30cbceb489438ce1eab03e95211, type: 3}
