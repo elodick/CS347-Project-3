@@ -15,6 +15,7 @@ TagManager:
   - EnemyParent
   - projectile
   - drop
+  - endoflevel
   layers:
   - Default
   - TransparentFX

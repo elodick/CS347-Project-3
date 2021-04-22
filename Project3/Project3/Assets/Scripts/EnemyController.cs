@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     public int health;
-
+    public bool canDrop;
     public float speed;
     public float aggroDistance;
     public float firingSpeed;
@@ -29,6 +29,7 @@ public class EnemyController : MonoBehaviour
         playerTransform = player.GetComponent<Transform>();
         selfTransform = GetComponent<Transform>();
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        canDrop = false;
     }
 
     // Update is called once per frame
@@ -68,43 +69,47 @@ public class EnemyController : MonoBehaviour
         var distanceToPlayer = Vector2.Distance(selfPosition, playerPosition);
         if (distanceToPlayer <= aggroDistance)
         {
+            canDrop = true;
             behavior = Behavior.ATTACK;
         }
     }
 
     private void OnDestroy()
     {
-        var itemToDrop = Random.Range(0, 8);
-        switch (itemToDrop)
+        if (canDrop)
         {
-            case 0:
-                Instantiate(healthdrop, transform.position, transform.rotation);
-                break;
-            case 1:
-                Instantiate(damageReducdrop, transform.position, transform.rotation);
-                break;
-            case 2:
-                Instantiate(bombdrop, transform.position, transform.rotation);
-                break;
-            case 3:
-                Instantiate(laserdrop, transform.position, transform.rotation);
-                break;
-            case 4:
-                Instantiate(shotgundrop, transform.position, transform.rotation);
-                break;
-            case 5:
-                Instantiate(invincdrop, transform.position, transform.rotation);
-                break;
-            case 6:
-                Instantiate(damageUpdrop, transform.position, transform.rotation);
-                break;
-            case 7:
-                Instantiate(speedupdrop, transform.position, transform.rotation);
-                break;
-            case 8:
-                Instantiate(firingspeedupdrop, transform.position, transform.rotation);
-                break;
+            var itemToDrop = Random.Range(0, 8);
+            switch (itemToDrop)
+            {
+                case 0:
+                    Instantiate(healthdrop, transform.position, transform.rotation);
+                    break;
+                case 1:
+                    Instantiate(damageReducdrop, transform.position, transform.rotation);
+                    break;
+                case 2:
+                    Instantiate(bombdrop, transform.position, transform.rotation);
+                    break;
+                case 3:
+                    Instantiate(laserdrop, transform.position, transform.rotation);
+                    break;
+                case 4:
+                    Instantiate(shotgundrop, transform.position, transform.rotation);
+                    break;
+                case 5:
+                    Instantiate(invincdrop, transform.position, transform.rotation);
+                    break;
+                case 6:
+                    Instantiate(damageUpdrop, transform.position, transform.rotation);
+                    break;
+                case 7:
+                    Instantiate(speedupdrop, transform.position, transform.rotation);
+                    break;
+                case 8:
+                    Instantiate(firingspeedupdrop, transform.position, transform.rotation);
+                    break;
 
+            }
         }
     }
 }
