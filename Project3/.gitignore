@@ -10,7 +10,7 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
-!Project3/Project3/obj
+!Project3/Project3/library
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 

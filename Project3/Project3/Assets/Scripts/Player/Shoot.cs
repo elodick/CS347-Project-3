@@ -14,54 +14,40 @@ public class Shoot : MonoBehaviour
     public float bulletForce = 20f;
     public float spreadWidth;
     public float timer;
-    public float flameRange;
-    public float flameLength;
-    private LineRenderer line;
-    private Vector3 mousePos;
     private float firingSpeed;
+    public int numOfSpread;
     void Start()
     {
         player = GameObject.Find("Player");
         playerRB = player.GetComponent<Rigidbody2D>();
-        line = player.GetComponent<LineRenderer>();
+        numOfSpread = 3;
     }
 
     // Update is called once per frame
     void Update()
     {
-        var shotType = GameObject.Find("Player").GetComponent<PlayerController>().shotType;
-        switch (shotType)
-        {
-            case 0:
-                if (Input.GetMouseButtonDown(0) && timer <= 0)
-                    basicShot();
-                break;
-            case 1:
-                if (Input.GetMouseButtonDown(0) && timer <= 0)
-                    spreadShot();
-                break;
-            case 2:
-                if (Input.GetMouseButtonDown(0) && timer <= 0)
-                {
-                    line.positionCount = 2;
-                    flameShot();
-                }
-                break;
-        }
-
-        if (Input.GetMouseButtonUp(2))
-            line.positionCount = 0;
-        firePoint = player.transform;
+        
     }
 
     private void FixedUpdate()
     {
         timer -= Time.deltaTime;
         firingSpeed = GetComponent<PlayerController>().firingSpeed;
-        mousePos = player.GetComponent<PlayerController>().cam.ScreenToWorldPoint(Input.mousePosition); ;
+        var shotType = GameObject.Find("Player").GetComponent<PlayerController>().shotType;
+        switch (shotType)
+        {
+            case 0:
+                if (Input.GetMouseButtonDown(0) && timer <= 0)
+                    BasicShot();
+                break;
+            case 1:
+                if (Input.GetMouseButtonDown(0) && timer <= 0)
+                    SpreadShot();
+                break;
+        }
     }
     
-    void basicShot()
+    void BasicShot()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
@@ -69,9 +55,9 @@ public class Shoot : MonoBehaviour
         timer = firingSpeed;
     }
 
-    void spreadShot()
+    void SpreadShot()
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < numOfSpread; i++)
         {
             firePoint.transform.rotation = Quaternion.Euler(0, 0, Random.Range(playerRB.rotation-15,playerRB.rotation+15));
             GameObject bullet = Instantiate(spreadPellet, transform.position + new Vector3(0, 0, i / spreadWidth), firePoint.rotation);
@@ -79,11 +65,5 @@ public class Shoot : MonoBehaviour
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         }
         timer = firingSpeed;
-    }
-
-    void flameShot()
-    {
-        line.SetPosition(0, player.transform.position);
-        line.SetPosition(1, mousePos / flameLength);
     }
 }

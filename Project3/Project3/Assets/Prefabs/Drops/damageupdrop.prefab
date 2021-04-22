@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2853664159022288073}
   - component: {fileID: 9118039621629237751}
   - component: {fileID: 3415731418541088858}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: damageupdrop
   m_TagString: drop
   m_Icon: {fileID: 0}

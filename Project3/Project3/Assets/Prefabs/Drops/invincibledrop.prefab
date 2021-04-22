@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 858351932459564333}
   - component: {fileID: 7657730126730758718}
   - component: {fileID: 8980281337806119855}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: invincibledrop
   m_TagString: drop
   m_Icon: {fileID: 0}

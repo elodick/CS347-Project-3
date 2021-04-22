@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 6648334737974260766}
   - component: {fileID: 6648334737974260767}
   - component: {fileID: 6648334737974260764}
+  - component: {fileID: 2316195933663802228}
   m_Layer: 0
   m_Name: Alternating Enemy
   m_TagString: Untagged
@@ -170,8 +171,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -860684638402951294, guid: 2501d875d4593d9498a35c9304a7015f,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -198,7 +200,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
+    oldSize: {x: 0.32, y: 0.59}
     newSize: {x: 0.2, y: 0.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -240,10 +242,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbcbdfb37a1ff164291b861ad444ac7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behavior: 0
+  dropPrefab: {fileID: 0}
+  health: 0
+  canDrop: 0
+  speed: 0
+  aggroDistance: 0
+  firingSpeed: 0
+  cooldown: 0
+  timer: 0
+  weight: 0
+  healthdrop: {fileID: 0}
+  damageReducdrop: {fileID: 0}
+  bombdrop: {fileID: 0}
+  laserdrop: {fileID: 0}
+  shotgundrop: {fileID: 0}
+  invincdrop: {fileID: 0}
+  damageUpdrop: {fileID: 0}
+  speedupdrop: {fileID: 0}
+  firingspeedupdrop: {fileID: 0}
   bulletPrefab: {fileID: 6406765260746010374, guid: a99609b1eeaec8f4f9a89e43c077d382,
     type: 3}
   bulletForce: 20
-  Health: 3
   AttackDelay: 3
   AttackTime: 0
   up: {fileID: 6648334738950896976}
@@ -254,6 +274,22 @@ MonoBehaviour:
   BottomRight: {fileID: 6648334737786308159}
   TopLeft: {fileID: 6648334737259910492}
   BottomLeft: {fileID: 6648334738530310092}
+--- !u!111 &2316195933663802228
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6648334737974260765}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c8fabddcceac2724c9c98b1203964645, type: 2}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6648334738235791727
 GameObject:
   m_ObjectHideFlags: 0
