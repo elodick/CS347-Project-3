@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firingSpeed = 0.75f;
+        firingSpeed = 0.25f;
         damageDealt = 2;
         damageReceived = 2;
         health = MaxHealth;
@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void Awake()
+    {
+         DontDestroyOnLoad(transform.gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -137,7 +141,7 @@ public class PlayerController : MonoBehaviour
                     break;
                 case 8:
                     DisplayAcquired("Increased FireRate!");
-                    firingSpeed -= 0.25f;
+                    firingSpeed -= 0.1f;
                     break;
             }
         }

@@ -2,16 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CanvasScript : MonoBehaviour
 {
-    private GameObject target;
-
     // Start is called before the first frame update
     void Start()
     {
-        target = GameObject.Find("Player");
+        
     }
-
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -19,10 +16,6 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-    }
-    void LateUpdate()
-    {
-        transform.position = target.GetComponent<Transform>().position - new Vector3(0,0,1);
+        
     }
 }
