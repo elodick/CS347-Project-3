@@ -10,12 +10,18 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     [SerializeField]
-    Text PickupMes, CurrentWeapon;
+    Text PickupMes, CurrentWeapon, Display_Damage, Display_FireRate, Display_MoveSpeed;
 
     [SerializeField]
     public float MSBaseTime, MessageTimer;
 
+
+    private string
+    bdam = "Damage: ", bfir = "FireRate: ", bmov = "MoveSpeed: ";
+
+
     public GameObject invincibleShield, bomb;
+
     public Rigidbody2D rb;
     public Camera cam;
     public float angle;
@@ -60,6 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             CurrentWeapon.text = "Current Weapon: FlameThrower";
         }
+        DisplayStats();
     }
     private void FixedUpdate()
     {
@@ -108,6 +115,7 @@ public class PlayerController : MonoBehaviour
                     if(damageReceived == 1)
                     {
                         //Because damage recieved can't be below 1, this could instead call temporary invincibilty;
+
                         break;
                     }
                     DisplayAcquired("Damage Reduction");
@@ -156,4 +164,10 @@ public class PlayerController : MonoBehaviour
         MessageTimer = MSBaseTime;
         PickupMes.text = mes;
     }
-}
+    public void DisplayStats()
+    {
+        Display_Damage.text = bdam +damageDealt;
+        Display_FireRate.text = bfir +firingSpeed; 
+        Display_MoveSpeed.text = bmov+moveSpeed;
+    }
+}//Display_Damage, Display_FireRate, Display_MoveSpeed;
