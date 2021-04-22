@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3105235719399578373}
   - component: {fileID: 6170851696262260142}
   - component: {fileID: 4841766587966017601}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: shotgun
   m_TagString: drop
   m_Icon: {fileID: 0}

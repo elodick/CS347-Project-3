@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1087563730471086721}
   - component: {fileID: 1087563730471086847}
   - component: {fileID: 1087563730471086844}
-  m_Layer: 8
-  m_Name: enemy_projectile 1
+  m_Layer: 9
+  m_Name: wave_proj
   m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

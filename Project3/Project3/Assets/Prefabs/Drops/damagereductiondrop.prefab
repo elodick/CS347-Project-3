@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 605424827835213223}
   - component: {fileID: 544241307703061909}
   - component: {fileID: -6447372892016184103}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: damagereductiondrop
   m_TagString: drop
   m_Icon: {fileID: 0}
