@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     private string[] scenes;
-    private List<int> scenesTraversed;
+    private int[] scenesTraversed;
     public int minSceneIndex;
     public int maxSceneIndex;
+    private int currentRun;
     public bool bossNext;
 
     // Start is called before the first frame update
@@ -20,25 +21,30 @@ public class SceneController : MonoBehaviour
         scenes[3] = "Stage1_2";
         scenes[4] = "Stage2_1";
         scenes[5] = "BossStage";
-
-        bossNext = false;                
+        minSceneIndex = 2;
+        maxSceneIndex = 4;
+        scenesTraversed = new int[3];
+        bossNext = false;
+        currentRun = 0;
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        scenesTraversed.Add(SceneManager.GetActiveScene().buildIndex);
-        if (scenesTraversed.Count >= (maxSceneIndex - minSceneIndex))
-            bossNext = true;
-        SceneManager.LoadScene(scenes[nextSceneIndex()]);
+        scenesTraversed[currentRun] = SceneManager.GetActiveScene().buildIndex;
+        currentRun++;
+        SceneManager.LoadScene(NextSceneIndex());
         GameObject.Find("Player").transform.position = new Vector3(0, 0, -1);
     }
 
-    private int nextSceneIndex()
+    private int NextSceneIndex()
     {
         int index = Random.Range(minSceneIndex, maxSceneIndex);
-        while(scenesTraversed.Contains(index))
-            index = Random.Range(minSceneIndex, maxSceneIndex);
-        if (bossNext)
+        foreach (int i in scenesTraversed)
+        {
+            if (i == index)
+                Random.Range(minSceneIndex, maxSceneIndex);
+        }
+            if (bossNext)
             index = 5;
         return index;
     }
