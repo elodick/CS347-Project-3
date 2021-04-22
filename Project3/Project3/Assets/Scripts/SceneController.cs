@@ -20,6 +20,8 @@ public class SceneController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        var player = GameObject.FindGameObjectWithTag("Player");
+        Destroy(player.GetComponent<PlayerController>().invincibleShield);
         SceneManager.LoadScene(nextScene);
     }
 }
