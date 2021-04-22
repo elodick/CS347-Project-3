@@ -1421,7 +1421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1061b31dcd2ab6b449969ef9bd416615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Stage1_2
+  minSceneIndex: 0
+  maxSceneIndex: 0
+  bossNext: 0
 --- !u!61 &732273806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25795,7 +25797,7 @@ GameObject:
   - component: {fileID: 1212022758}
   m_Layer: 0
   m_Name: Exit
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
