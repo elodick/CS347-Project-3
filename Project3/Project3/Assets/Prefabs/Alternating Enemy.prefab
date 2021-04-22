@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6648334737974260766}
   - component: {fileID: 6648334737974260767}
   - component: {fileID: 6648334737974260764}
-  - component: {fileID: 2316195933663802228}
+  - component: {fileID: -97826788098557043}
   m_Layer: 0
   m_Name: Alternating Enemy
   m_TagString: Untagged
@@ -274,22 +274,25 @@ MonoBehaviour:
   BottomRight: {fileID: 6648334737786308159}
   TopLeft: {fileID: 6648334737259910492}
   BottomLeft: {fileID: 6648334738530310092}
---- !u!111 &2316195933663802228
-Animation:
+--- !u!95 &-97826788098557043
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6648334737974260765}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c8fabddcceac2724c9c98b1203964645, type: 2}
-  m_Animations:
-  - {fileID: 0}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 780c9d4af96a45049b536810d08c8860, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6648334738235791727
 GameObject:
   m_ObjectHideFlags: 0
