@@ -138,11 +138,6 @@ public class SpawnController : MonoBehaviour
                 // Activate doors so player cannot exit room
                 door.SetActive(true);
 
-                // Disable all room colliders 
-                foreach (Component colliders in GetComponents<BoxCollider2D>())
-                {
-                    colliders.GetComponent<BoxCollider2D>().enabled = false;
-                }
             }
         }
     }   

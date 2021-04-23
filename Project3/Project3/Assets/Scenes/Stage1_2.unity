@@ -200,9 +200,9 @@ MonoBehaviour:
   room: {fileID: 543523664}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -21825,9 +21825,9 @@ MonoBehaviour:
   room: {fileID: 476236581}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -21984,8 +21984,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 10
   canDrop: 0
   speed: 0
@@ -29867,8 +29865,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 10
   canDrop: 0
   speed: 5
@@ -30268,9 +30264,9 @@ MonoBehaviour:
   room: {fileID: 1359408498}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -30656,8 +30652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 10
   canDrop: 0
   speed: 0
@@ -30898,7 +30892,7 @@ GameObject:
   - component: {fileID: 1445975232}
   m_Layer: 0
   m_Name: r3westdoor
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31234,9 +31228,9 @@ MonoBehaviour:
   room: {fileID: 1906052998}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -31903,6 +31897,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6648334737974260767, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c516cd579ce7bee4a998fb1e4dcd96e0, type: 3}
 --- !u!4 &1892477675 stripped
@@ -32442,6 +32441,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4098936763124751656, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098936763124751656, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149bd34d29a47f04897906526dfbbb3a, type: 3}
 --- !u!4 &1943228309 stripped
@@ -32703,7 +32712,7 @@ GameObject:
   - component: {fileID: 2056604283}
   m_Layer: 0
   m_Name: r3eastdoor
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32810,7 +32819,7 @@ GameObject:
   - component: {fileID: 2092859965}
   m_Layer: 0
   m_Name: r3southdoor
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

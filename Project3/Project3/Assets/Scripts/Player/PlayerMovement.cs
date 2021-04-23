@@ -17,18 +17,20 @@ public class PlayerMovement : MonoBehaviour
         var downIsPressed = Input.GetKey(KeyCode.S);
         var upIspressed = Input.GetKey(KeyCode.W);
 
-        if (rightIsPressed)
-            MoveRight();
-        if (leftIsPressed)
-            MoveLeft();
-        if (downIsPressed)
-            MoveDown();
-        if (upIspressed)
-            MoveUp();
-        
-        
-        mouse = cam.ScreenToWorldPoint(Input.mousePosition);
+        if (!PauseMenu.isPaused)
+        {
+            if (rightIsPressed)
+                MoveRight();
+            if (leftIsPressed)
+                MoveLeft();
+            if (downIsPressed)
+                MoveDown();
+            if (upIspressed)
+                MoveUp();
 
+
+            mouse = cam.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 
     void FixedUpdate()
