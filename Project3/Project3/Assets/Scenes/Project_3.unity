@@ -590,7 +590,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276.3, y: 152}
+  m_AnchoredPosition: {x: 276.3, y: 123}
   m_SizeDelta: {x: 234.6, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58990129
@@ -2056,7 +2056,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276.29996, y: 74}
+  m_AnchoredPosition: {x: 276.29996, y: 43}
   m_SizeDelta: {x: 234.6, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &388354421
@@ -2793,7 +2793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -242.4, y: -147.95}
+  m_AnchoredPosition: {x: -242.4, y: -122}
   m_SizeDelta: {x: 291.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520716512
@@ -2994,8 +2994,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 5
   canDrop: 0
   speed: 0
@@ -4389,9 +4387,9 @@ MonoBehaviour:
   room: {fileID: 2134682690}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -5418,8 +5416,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 10
   canDrop: 0
   speed: 0
@@ -7241,7 +7237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 276.29996, y: 111}
+  m_AnchoredPosition: {x: 276.29996, y: 83}
   m_SizeDelta: {x: 234.6, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1749489238
@@ -9094,8 +9090,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 10
   canDrop: 0
   speed: 5
@@ -9319,8 +9313,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 10
   canDrop: 0
   speed: 0
@@ -9947,6 +9939,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 307.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7697289906183340691, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -122
+      objectReference: {fileID: 0}
     - target: {fileID: 7697289905148010588, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
         type: 3}
       propertyPath: m_Name
@@ -10005,6 +10002,11 @@ PrefabInstance:
     - target: {fileID: 7697289905148010589, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697289905237012747, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

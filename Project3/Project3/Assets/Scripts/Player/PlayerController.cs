@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     {
         firingSpeed = 0.25f;
         damageDealt = 2;
-        damageReceived = 2;
+        damageReceived = 1;
         health = MaxHealth;
         moveSpeed = 0.1f;
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -97,11 +97,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("projectile") && !invulnerable)
+        if (timer <= 0)
         {
-            timer = 0.2f;
-            spriteRenderer.color = new Color(1, 0, 0, 1);
-            health -= damageReceived;
+            if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("projectile") && !invulnerable)
+            {
+                timer = 1f;
+                spriteRenderer.color = new Color(1, 0, 0, 1);
+                health -= damageReceived;
+            }
         }
         if (collision.gameObject.CompareTag("drop"))
         {
@@ -111,6 +114,7 @@ public class PlayerController : MonoBehaviour
             {
                 case 0:
                     MaxHealth += 1;
+                    health = MaxHealth; 
                     DisplayAcquired("Health increased");
                     break;
                 case 1:
