@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.990566, g: 0.014017418, b: 0.85468054, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2072,7 +2072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.9388145, g: 0, b: 0.9433962, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2810,7 +2810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.990566, g: 0, b: 0.8950875, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5445,7 +5445,7 @@ MonoBehaviour:
   enemy_projectile: {fileID: 756808830172905220, guid: c26ee019ef59b6f4da05afb0aac59faf,
     type: 3}
   numberOfProjectiles: 12
-  radius: 5
+  bulletsprayradius: 0
   moveSpeed: 5
 --- !u!212 &1318322950
 SpriteRenderer:
@@ -7253,7 +7253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.8679245, g: 0, b: 0.7935214, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7261,7 +7261,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
@@ -9943,6 +9943,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -122
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697289906183340716, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.990566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697289906183340716, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7697289906183340716, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.8950875
       objectReference: {fileID: 0}
     - target: {fileID: 7697289905148010588, guid: 13fff9d0838d2e74e8a4d80ae6d6a1cb,
         type: 3}
