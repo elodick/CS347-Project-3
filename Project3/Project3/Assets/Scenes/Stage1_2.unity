@@ -21235,7 +21235,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &716032424
 PrefabInstance:
@@ -21359,6 +21359,11 @@ PrefabInstance:
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 716032425}
+    - target: {fileID: 7043819511996306647, guid: e663896eee65e2e4395c000271b37742,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7043819510928407888, guid: e663896eee65e2e4395c000271b37742,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -29964,8 +29969,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1061b31dcd2ab6b449969ef9bd416615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSceneIndex: 0
-  maxSceneIndex: 0
   bossNext: 0
 --- !u!61 &1236542810
 BoxCollider2D:
