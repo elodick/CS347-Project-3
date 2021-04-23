@@ -45,12 +45,21 @@ public class SpawnController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        foreach (BoxCollider2D colliders in this.GetComponents<BoxCollider2D>())
+            {
+                colliders.GetComponent<BoxCollider2D>().enabled = false;
+            }
         // if the waves are "over" (wave = 0) and all spawned enemies are defeated (enemies count = original enemy count), then deactivated all doors.
         if (wave == 0 && enemiesCount == originalEnemyCount)
         {
             foreach(GameObject door in GameObject.FindGameObjectsWithTag("door"))
                 door.SetActive(false);
+
+            // Disable all room colliders 
+            foreach (BoxCollider2D colliders in this.GetComponents<BoxCollider2D>())
+            {
+                colliders.GetComponent<BoxCollider2D>().enabled = false;
+            }
         }
 
         // if there are a different number of enemies in the scene than the original count, the doors should be active.
