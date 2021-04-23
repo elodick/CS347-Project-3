@@ -304,6 +304,7 @@ MonoBehaviour:
   MoveR: 0
   Attack: 0
   Boss: {fileID: 3905242255486639115}
+  Door: {fileID: 5965952291652860685, guid: 2fab84df240fc49498f098c3548914c9, type: 3}
   health: 40
   p2Health: 0
   Speed: 0.1
