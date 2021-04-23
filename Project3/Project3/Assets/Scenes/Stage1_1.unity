@@ -695,7 +695,7 @@ Transform:
   - {fileID: 1331113596}
   - {fileID: 1934900049}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &266976252
 PrefabInstance:
@@ -1666,8 +1666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1061b31dcd2ab6b449969ef9bd416615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minSceneIndex: 0
-  maxSceneIndex: 0
   bossNext: 0
 --- !u!61 &732273806
 BoxCollider2D:
@@ -18347,6 +18345,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3324287321341031936, guid: 35c21ec9f4b30204691b80468bc640ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c21ec9f4b30204691b80468bc640ce, type: 3}
 --- !u!1 &853220055
@@ -27786,6 +27789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3324287321341031936, guid: 35c21ec9f4b30204691b80468bc640ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.26
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35c21ec9f4b30204691b80468bc640ce, type: 3}
