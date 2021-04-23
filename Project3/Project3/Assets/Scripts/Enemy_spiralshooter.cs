@@ -30,7 +30,7 @@ public class Enemy_spiralshooter : EnemyController
     // Find a random number from 4-36, cast it to an int, and return that value
     int getNumberOfProjectiles()
     {
-        var result = Random.Range(4, 36);
+        var result = Random.Range(4, 8);
         return (int)result;
     }
     // Update is called once per frame

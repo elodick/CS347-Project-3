@@ -4709,9 +4709,9 @@ MonoBehaviour:
   room: {fileID: 1030029604}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -5835,6 +5835,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6648334737974260767, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c516cd579ce7bee4a998fb1e4dcd96e0, type: 3}
 --- !u!4 &1575669883 stripped
@@ -5915,8 +5920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 6
   canDrop: 0
   speed: 0
@@ -20423,8 +20426,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 6
   canDrop: 0
   speed: 0
@@ -20587,9 +20588,9 @@ MonoBehaviour:
   room: {fileID: 1761959699}
   wave: 0
   enemiesCount: 0
-  totalWeight: 15
-  weight: 0
   originalEnemyCount: 0
+  weight: 0
+  totalWeight: 15
   mean: 5
   variance: 1
   maxIters: 20
@@ -20813,6 +20814,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098936763124751656, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098936763124751656, guid: 149bd34d29a47f04897906526dfbbb3a,
+        type: 3}
+      propertyPath: m_Mass
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 149bd34d29a47f04897906526dfbbb3a, type: 3}
@@ -23176,8 +23187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behavior: 0
-  dropPrefab: {fileID: 328624454726411419, guid: d228846ceb61c3f439e9ba28ad3d7c40,
-    type: 3}
   health: 6
   canDrop: 0
   speed: 5
