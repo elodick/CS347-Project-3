@@ -49,7 +49,6 @@ public class SpawnController : MonoBehaviour
             {
                 colliders.GetComponent<BoxCollider2D>().enabled = false;
             }
-        // if the waves are "over" (wave = 0) and all spawned enemies are defeated (enemies count = original enemy count), then deactivated all doors.
         if (wave == 0 && enemiesCount == originalEnemyCount)
         {
             foreach(GameObject door in GameObject.FindGameObjectsWithTag("door"))
@@ -62,11 +61,9 @@ public class SpawnController : MonoBehaviour
             }
         }
 
-        // if there are a different number of enemies in the scene than the original count, the doors should be active.
         if (enemiesCount != originalEnemyCount)
             door.SetActive(true);
 
-        // if there are still waves to cycle through, but there are currently no spawned enemies, make the spawn trigger active and reset the weight.
         if (wave > 0 && enemiesCount == originalEnemyCount)
         {
             spawntrigger.SetActive(true);
@@ -74,7 +71,6 @@ public class SpawnController : MonoBehaviour
             weight = 0;
         }
 
-        // Constantly update the list of enemies
         enemies = new List<GameObject>();
         foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
         {
@@ -86,20 +82,16 @@ public class SpawnController : MonoBehaviour
 
     void spawnEnemy()
     {
-        // Calculate the total weight of the enemies
         enemiesWeight();
 
-        // Calculate the number of enemies to spawn using a normal distribution random variable
         float probabilityNum = Probabilities.RandomNormalVariable(mean, variance, maxIters, numRects);
 
         // round the resulting number to an int
         int numToSpawn = Mathf.RoundToInt(probabilityNum);
 
-        // Populate the list of all available spawn points
         spawnpoints = new List<GameObject>();
         foreach (GameObject spawn in GameObject.FindGameObjectsWithTag("spawnpoint"))
         {
-            // Only want to use the spawnpoints near the player, so that spawnpoints in other rooms don't spawn enemies
             var distanceFromSpawnToPlayer = Vector2.Distance(GameObject.Find("Player").transform.position, spawn.transform.position);
             if (distanceFromSpawnToPlayer <= 20)
             {

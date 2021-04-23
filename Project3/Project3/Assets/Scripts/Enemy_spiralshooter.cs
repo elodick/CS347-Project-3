@@ -6,14 +6,11 @@ using UnityEngine;
    This script uses a uniform distribution to change a random number of projectiles to shoot per pulse */
 public class Enemy_spiralshooter : EnemyController
 {
-    // The enemy_projectile GameObject is the prefab to use for the enemy's bullets
     public GameObject enemy_projectile;
 
-    // Number of projectiles to shoot per pulse
     public int numberOfProjectiles;
 
-    // Radius of the circle the shots travel in
-    public float radius;
+    public float bulletsprayradius;
 
     // The current position of the enemy
     Vector3 selfPosition;
@@ -24,6 +21,7 @@ public class Enemy_spiralshooter : EnemyController
     override protected void Start()
     {
         base.Start();
+        bulletsprayradius = 5;
         selfPosition = selfTransform.position;
     }
 
@@ -74,8 +72,8 @@ public class Enemy_spiralshooter : EnemyController
 
         for (int i = 0; i <= numberOfProjectiles - 1; i++)
         {
-            float projectile_DirectionX = selfPosition.x + Mathf.Sin((angle * Mathf.PI)/180 * radius);
-            float projectile_DirectionY = selfPosition.y + Mathf.Cos((angle * Mathf.PI)/180 * radius);
+            float projectile_DirectionX = selfPosition.x + Mathf.Sin((angle * Mathf.PI)/180 * bulletsprayradius);
+            float projectile_DirectionY = selfPosition.y + Mathf.Cos((angle * Mathf.PI)/180 * bulletsprayradius);
 
             var projectileMoveVector = new Vector3(projectile_DirectionX, projectile_DirectionY, 0);
             var projectileDirection = (projectileMoveVector - selfPosition).normalized * moveSpeed;

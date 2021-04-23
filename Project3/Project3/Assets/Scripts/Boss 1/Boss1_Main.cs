@@ -15,7 +15,7 @@ public class Boss1_Main : MonoBehaviour
     bool Attack;
 
     [SerializeField]
-    GameObject Boss;
+    GameObject Boss, player;
 
     [SerializeField]
     public float health, p2Health;
@@ -30,7 +30,7 @@ public class Boss1_Main : MonoBehaviour
     public float BaseBdelay, BaseShootDuration; //Fire rate and duration bullets are fired for
 
     public float Bdelay, ShootDuration;
-   
+
     [SerializeField]
     public SpriteRenderer spriteRenderer;
 
@@ -38,24 +38,25 @@ public class Boss1_Main : MonoBehaviour
     public Sprite P1Sprite, P2Sprite, P3Sprite;
 
     public Boss1_Attack BossA;
-    
+
     void Start()
     {
+        player = GameObject.Find("Player");
         spriteRenderer.sprite = P1Sprite;
-        MoveR = true; 
+        MoveR = true;
         Phase1 = true;
         Phase2 = false;
         p2Health = health / 2.3f; // Health needed to start phase2 
         MoveTime = BaseMoveTime;
         Bdelay = BaseBdelay;
         ShootDuration = BaseShootDuration;
-        
-      
+
+
     }
 
     void FixedUpdate()
     {
-        
+
         //  MoveTime -= Time.deltaTime;
         AttackTime -= Time.deltaTime;
 
@@ -66,32 +67,35 @@ public class Boss1_Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if(Phase1) // Start Phase 1 actions
+        if (health <= 0)
+        {
+            Die();
+        }
+        if (Phase1) // Start Phase 1 actions
         {
             //Start_P1();
-          
+
 
         }
         if (Phase2) // Start Phase 2 actions
         {
             spriteRenderer.sprite = P2Sprite;
         }
-       
-        
 
-        
+
+
+
         if (Bdelay < -3) // Reset Move Time and swap move directions
         {
             Bdelay = BaseBdelay;
 
         }
 
-        if(ShootDuration <0)
+        if (ShootDuration < 0)
         {
             ShootDuration = BaseShootDuration;
         }
-       
+
 
 
         if (health <= p2Health)//Enter third stage if below or equal health threshold
@@ -123,11 +127,11 @@ public class Boss1_Main : MonoBehaviour
         if (MoveR)
         {
             //Move Right
-          
-                transform.position += new Vector3(Speed, 0, 0);
-            
+
+            transform.position += new Vector3(Speed, 0, 0);
+
         }
-        if(MoveL)
+        if (MoveL)
         {
             //Move Left
             transform.position += new Vector3(-Speed, 0, 0);
@@ -150,61 +154,67 @@ public class Boss1_Main : MonoBehaviour
             return;
         }
     }
-    
+
     private void AttackRandom()
     {
-       if(Phase1)
+        if (Phase1)
         {
-            int x = Random.Range(1, 21);    //
+            int x = Random.Range(1, 21);    //Uniform dist for boss attacks
             if (x < 15)
-            {
-              Boss.GetComponent<Boss1_Attack>().ShootBullets();
-            }
-                if (x >= 15)
-                {
-                    Boss.GetComponent<Boss1_Attack>().SpawnEnemies();
-                }
-            
-        }
-       if(Phase2)
-        {
-            int x = Random.Range(1, 21);
-            if( x< 7)
             {
                 Boss.GetComponent<Boss1_Attack>().ShootBullets();
             }
-            if(x>7 && x<14)
+            if (x >= 15)
             {
                 Boss.GetComponent<Boss1_Attack>().SpawnEnemies();
             }
-            if(x> 14)
+
+        }
+        if (Phase2)
+        {
+            int x = Random.Range(1, 21); //Uniform dist for boss attacks
+            if (x < 7)
+            {
+                Boss.GetComponent<Boss1_Attack>().ShootBullets();
+            }
+            if (x > 7 && x < 14)
+            {
+                Boss.GetComponent<Boss1_Attack>().SpawnEnemies();
+            }
+            if (x > 14)
             {
                 Boss.GetComponent<Boss1_Attack>().ShootExplosion();
             }
         }
+
+
+    }
+    private void Die()
+    {
        
-        
+        Destroy(this.gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
-            if(MoveL)
+            if (MoveL)
             {
                 MoveL = false;
                 MoveR = true;
                 return;
             }
-            if(MoveR)
+            if (MoveR)
             {
                 MoveL = true;
                 MoveR = false;
                 return;
             }
         }
-        if(collision.gameObject.CompareTag("PlayerBullet"))
+        if (collision.gameObject.CompareTag("playerbullet"))
         {
 
+            health -= player.GetComponent<PlayerController>().damageDealt;
         }
     }
 }
