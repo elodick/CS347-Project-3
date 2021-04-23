@@ -33,16 +33,19 @@ public class Shoot : MonoBehaviour
         timer -= Time.deltaTime; 
         firingSpeed = GetComponent<PlayerController>().firingSpeed;
         var shotType = GameObject.Find("Player").GetComponent<PlayerController>().shotType;
-        switch (shotType)
+        if(!PauseMenu.isPaused)
         {
-            case 0:
-                if (Input.GetMouseButtonDown(0) && timer <= 0)
-                    BasicShot();
-                break;
-            case 1:
-                if (Input.GetMouseButtonDown(0) && timer <= 0)
-                    SpreadShot();
-                break;
+            switch (shotType)
+            {
+                case 0:
+                    if (Input.GetMouseButtonDown(0) && timer <= 0)
+                        BasicShot();
+                    break;
+                case 1:
+                    if (Input.GetMouseButtonDown(0) && timer <= 0)
+                        SpreadShot();
+                    break;
+            }
         }
     }
 
