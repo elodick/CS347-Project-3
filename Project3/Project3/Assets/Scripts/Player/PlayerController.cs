@@ -72,8 +72,8 @@ public class PlayerController : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        //if (health <= 0)
-            //SceneManager.LoadScene("SampleScene");
+        if (health <= 0)
+            SceneManager.LoadScene("GameOver");
         timer -= Time.deltaTime;
         shieldtimer -= Time.deltaTime;
         bombtimer -= Time.deltaTime;

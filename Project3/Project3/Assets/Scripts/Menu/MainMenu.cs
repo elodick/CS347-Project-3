@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    
+
+    void Start()
+    {
+        GameObject oldPlayer = GameObject.FindWithTag("player");
+        if (oldPlayer != null)
+            Destroy(oldPlayer);
+    }
+
 
     public void PlayGame()
     {
