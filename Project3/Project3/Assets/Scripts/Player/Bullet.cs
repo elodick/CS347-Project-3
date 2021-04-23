@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("projectile"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             Physics2D.IgnoreCollision(collision.collider, this.GetComponent<BoxCollider2D>());
         }

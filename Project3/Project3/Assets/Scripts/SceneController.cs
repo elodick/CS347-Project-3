@@ -32,6 +32,9 @@ public class SceneController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+            var drops = GameObject.FindGameObjectsWithTag("drop");
+            foreach (GameObject drop in drops)
+                Destroy(drop);
             scenesTraversed[currentRun] = SceneManager.GetActiveScene().buildIndex;
             currentRun++;
             SceneManager.LoadScene(NextSceneIndex());
