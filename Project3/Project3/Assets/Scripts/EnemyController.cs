@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script handles all generic attributes of the enemies, as well as their drops.  The enemies on their death (OnDestroy) select from a uniform distribution in order
+ * to decide what to drop. Only the enemies that are spawned (canDrop = true) drop anything once destroyed. */ 
 public class EnemyController : MonoBehaviour
 {
     public enum Behavior { IDLE, ATTACK, MOVE };
@@ -10,7 +12,6 @@ public class EnemyController : MonoBehaviour
     protected Transform selfTransform;
     public Behavior behavior;
 
-    public GameObject dropPrefab;
     private SpriteRenderer spriteRenderer;
 
     public int health;
@@ -21,6 +22,8 @@ public class EnemyController : MonoBehaviour
     public float cooldown;
     public float timer;
     public int weight;
+
+    // Set these GameObjects in the hierarchy to determine the prefabs to use for drops.
     public GameObject healthdrop, damageReducdrop, bombdrop, laserdrop, shotgundrop, invincdrop, damageUpdrop, speedupdrop, firingspeedupdrop;
     // Start is called before the first frame update
     virtual protected void Start()
