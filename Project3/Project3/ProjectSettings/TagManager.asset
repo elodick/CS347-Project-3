@@ -17,6 +17,7 @@ TagManager:
   - drop
   - endoflevel
   - bomb
+  - door
   layers:
   - Default
   - TransparentFX

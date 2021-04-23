@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6091936719203228405}
   m_Layer: 9
   m_Name: E_Bullet
-  m_TagString: EnemyBullet
+  m_TagString: projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6406765260746010374}
   m_LocalRotation: {x: -0.000000018626453, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.375874, y: -4.956336, z: 0}
-  m_LocalScale: {x: 2.92, y: 1, z: 1}
+  m_LocalScale: {x: 3.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -3,12 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script manages the basic and spread shot firing patterns for the player, as well as how quickly each pattern can shoot */
 public class Shoot : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
     public GameObject spreadPellet;
-
+    public AudioClip normalShot;
+    public AudioClip shotgun;
+    private AudioSource audioSource;
     private GameObject player;
     private Rigidbody2D playerRB;
     public float bulletForce = 20f;
@@ -21,6 +24,7 @@ public class Shoot : MonoBehaviour
         player = GameObject.Find("Player");
         playerRB = player.GetComponent<Rigidbody2D>();
         numOfSpread = 3;
+        audioSource = player.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -53,6 +57,8 @@ public class Shoot : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         timer = firingSpeed;
+        audioSource.PlayOneShot(normalShot, 0.7f);
+
     }
 
     void SpreadShot()
@@ -65,5 +71,6 @@ public class Shoot : MonoBehaviour
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
         }
         timer = firingSpeed;
+        audioSource.PlayOneShot(shotgun, 0.7f);
     }
 }

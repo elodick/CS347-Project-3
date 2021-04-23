@@ -17,6 +17,7 @@ public class Enemy_chaser : EnemyController
     override protected void Start()
     {
         base.Start();
+        health = 1;
     }
 
     // Update is called once per frame
