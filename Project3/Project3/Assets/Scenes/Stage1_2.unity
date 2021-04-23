@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 91524241}
   m_Layer: 0
   m_Name: door
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 167342801}
   m_Layer: 0
   m_Name: r4southdoor
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +514,7 @@ GameObject:
   - component: {fileID: 204864412}
   m_Layer: 0
   m_Name: door
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 471326292}
   m_Layer: 0
   m_Name: r4westdoor
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21437,7 +21437,7 @@ GameObject:
   - component: {fileID: 792463749}
   m_Layer: 0
   m_Name: r4eastdoor
-  m_TagString: Wall
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

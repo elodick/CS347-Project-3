@@ -28,7 +28,8 @@ public class SpawnController : MonoBehaviour
     {
         if (wave == 0 && enemiesCount == originalEnemyCount)
         {
-            door.SetActive(false);
+            foreach(GameObject door in GameObject.FindGameObjectsWithTag("door"))
+                door.SetActive(false);
         }
         if (enemiesCount != originalEnemyCount)
             door.SetActive(true);
@@ -93,7 +94,10 @@ public class SpawnController : MonoBehaviour
                 spawnEnemy();
                 spawntrigger.SetActive(false);
                 door.SetActive(true);
-                GetComponent<BoxCollider2D>().enabled = false;
+                foreach (Component colliders in GetComponents<BoxCollider2D>())
+                {
+                    colliders.GetComponent<BoxCollider2D>().enabled = false;
+                }
             }
         }
     }   
