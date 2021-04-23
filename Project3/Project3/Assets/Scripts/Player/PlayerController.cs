@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
+/* This script adds the general attributes of the player, information for the interface, as well as manages their drops. */
 public class PlayerController : MonoBehaviour
 {
     public int health, MaxHealth;

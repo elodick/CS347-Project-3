@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Controls overall behavior for the enemy projectile.  This script directs all enemy projectiles to have a lifetime of 5.0f before they are destroyed, and that they are
+// destroyed upon impact with the walls, the player, or their bullets. 
 public class EnemyProjectileController : MonoBehaviour
 {
     private float lifetime;

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script manages the basic and spread shot firing patterns for the player, as well as how quickly each pattern can shoot */
 public class Shoot : MonoBehaviour
 {
     public Transform firePoint;
