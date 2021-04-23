@@ -5,12 +5,8 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     private string[] scenes;
-    private int[] scenesTraversed;
-    public int minSceneIndex;
-    public int maxSceneIndex;
-    private int currentRun;
+    private List<int> scenesTraversed;
     public bool bossNext;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +17,6 @@ public class SceneController : MonoBehaviour
         scenes[3] = "Stage1_2";
         scenes[4] = "Stage2_1";
         scenes[5] = "BossStage";
-        minSceneIndex = 2;
-        maxSceneIndex = 4;
-        scenesTraversed = new int[3];
-        bossNext = false;
-        currentRun = 0;
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -33,26 +24,17 @@ public class SceneController : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             var drops = GameObject.FindGameObjectsWithTag("drop");
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject drop in drops)
                 Destroy(drop);
-            scenesTraversed[currentRun] = SceneManager.GetActiveScene().buildIndex;
-            currentRun++;
-            SceneManager.LoadScene(NextSceneIndex());
+            foreach (GameObject enemy in enemies)
+                Destroy(enemy);
+            var curScene = SceneManager.GetActiveScene();
+            for (int i = 0; i < 6; i++)
+                if (curScene.name.Equals(scenes[i]))
+                    SceneManager.LoadScene(scenes[i+1]);
             GameObject.Find("Player").transform.position = new Vector3(0, 0, -1);
         }
-    }
-
-    private int NextSceneIndex()
-    {
-        int index = Random.Range(minSceneIndex, maxSceneIndex);
-        foreach (int i in scenesTraversed)
-        {
-            if (i == index)
-                Random.Range(minSceneIndex, maxSceneIndex);
-        }
-            if (bossNext)
-            index = 5;
-        return index;
     }
 }
 

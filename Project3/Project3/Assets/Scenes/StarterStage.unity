@@ -8265,7 +8265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSceneIndex: 0
   maxSceneIndex: 0
-  bossNext: 0
+  bossNext: 1
 --- !u!212 &517851618
 SpriteRenderer:
   m_ObjectHideFlags: 0
