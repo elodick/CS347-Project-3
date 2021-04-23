@@ -393,7 +393,7 @@ MonoBehaviour:
   Bullet: {fileID: 6406765260746010374, guid: a99609b1eeaec8f4f9a89e43c077d382, type: 3}
   RemainingDuration: 0
   test: 0
-  Duration: 2
+  Duration: 1
   PreExplosion: 0.05
   AfterExplosion: 20
   Top: {fileID: 2585068405319075533}

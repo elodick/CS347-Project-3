@@ -56,7 +56,7 @@ public class Boss1_Main : MonoBehaviour
     void FixedUpdate()
     {
         
-          MoveTime -= Time.deltaTime;
+        //  MoveTime -= Time.deltaTime;
         AttackTime -= Time.deltaTime;
 
         Bdelay -= Time.deltaTime;
@@ -104,11 +104,13 @@ public class Boss1_Main : MonoBehaviour
                 BaseMoveTime -= 1f;
             }
         }
+        /*
         if (MoveTime <= 0 ) // Reset Move Time and swap move directions
         {
             MoveTime = BaseMoveTime;
             MoveSwap(); 
         }
+        */
         if (AttackTime <= 0) // Reset Move Time and swap move directions
         {
             AttackTime = BaseAttackTime;
@@ -182,5 +184,27 @@ public class Boss1_Main : MonoBehaviour
         }
        
         
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Wall"))
+        {
+            if(MoveL)
+            {
+                MoveL = false;
+                MoveR = true;
+                return;
+            }
+            if(MoveR)
+            {
+                MoveL = true;
+                MoveR = false;
+                return;
+            }
+        }
+        if(collision.gameObject.CompareTag("PlayerBullet"))
+        {
+
+        }
     }
 }
