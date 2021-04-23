@@ -121,10 +121,7 @@ public class PlayerController : MonoBehaviour
                     if(damageReceived == 1)
                     {
                         //Because damage recieved can't be below 1, this could instead call temporary invincibilty;
-                        shieldtimer = 5.0f;
-                        invincibleShield.SetActive(true);
-                        invulnerable = true;
-                        DisplayAcquired("Temporary Invincibility");
+
                         break;
                     }
                     DisplayAcquired("Damage Reduction");

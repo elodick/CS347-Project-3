@@ -46,40 +46,37 @@ public class Heart_Manage : MonoBehaviour
         //Health = Player.GetComponent<PlayerMovementDylan>().Health; //This may be removed
         Hearts = Health;
         Health = Player.GetComponent<PlayerController>().health;
-    
         MaxHealth = Player.GetComponent<PlayerController>().MaxHealth;
-        
-       
-            for (int i = 0; i < HeartList.Length; i++)
+        for (int i = 0; i < HeartList.Length; i++)
+        {
+
+            if(i<=Health)
             {
+                HeartList[i].gameObject.SetActive(true);
+                HeartList[i].sprite = Full;
+            }
+            if(i>Health)
+            {
+                HeartList[i].gameObject.SetActive(true);
+                HeartList[i].sprite = Empty;
+            }
+            if(i> MaxHealth)
+            {
+                HeartList[i].gameObject.SetActive(false);
+            }
 
-                if (i <= Health)
-                {
-                    HeartList[i].gameObject.SetActive(true);
-                    HeartList[i].sprite = Full;
-                }
-                if (i > Health)
-                {
-                    HeartList[i].gameObject.SetActive(true);
-                    HeartList[i].sprite = Empty;
-                }
-                if (i > MaxHealth)
-                {
-                    HeartList[i].gameObject.SetActive(false);
-                }
-
-                /*
-                     if (i < Hearts)
-                     {
-                         HeartList[i].enabled = true;
-                     }
-                     else
-                     {
-                         HeartList[i].enabled = false;
-                     }
-                */
+       /*
+            if (i < Hearts)
+            {
+                HeartList[i].enabled = true;
+            }
+            else
+            {
+                HeartList[i].enabled = false;
+            }
+       */
             
-               }
+        }
 
     }
 
