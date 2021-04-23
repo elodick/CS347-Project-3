@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* This script controls the enemy spawners in the rooms. Th */
 public class SpawnController : MonoBehaviour
 {
     public List<GameObject> enemies;
