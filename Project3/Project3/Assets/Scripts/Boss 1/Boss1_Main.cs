@@ -215,6 +215,18 @@ public class Boss1_Main : MonoBehaviour
         {
 
             health -= player.GetComponent<PlayerController>().damageDealt;
+            if(MoveL)
+            {
+                MoveL = false;
+                MoveR = true;
+                return;
+            }
+            if (MoveR)
+            {
+                MoveL = true;
+                MoveR = false;
+                return;
+            }
         }
     }
 }

@@ -6097,6 +6097,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3905242255486639119, guid: 05498e2a3e3d0ef4691d1f1e1d042054,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 3905242255486639116, guid: 05498e2a3e3d0ef4691d1f1e1d042054,
+        type: 3}
+      propertyPath: ChaseEnemy
+      value: 
+      objectReference: {fileID: 6648334737974260765, guid: c516cd579ce7bee4a998fb1e4dcd96e0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05498e2a3e3d0ef4691d1f1e1d042054, type: 3}
 --- !u!1001 &1866828850

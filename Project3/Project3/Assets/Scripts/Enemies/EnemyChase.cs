@@ -27,4 +27,11 @@ public class EnemyChase : MonoBehaviour
         rb.angularVelocity = -rotation * rotationSpeed;
         rb.velocity = transform.up * speed;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }
